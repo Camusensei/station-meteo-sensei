@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1353,1050" id="Meteo" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledX="-106" scrolledY="-117" tag="1000" key="32303037303533312D31303030204D6574656F2F4D616C70686173">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1451,2720" id="Meteo" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledX="-54" scrolledY="314" tag="1000" key="32303037303533312D31303030204D6574656F2F4D616C70686173">
   <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.17/@sourceConnections.0 //@children.18/@sourceConnections.0 //@children.19/@sourceConnections.0" name="sonde" location="839,210" size="80,67" id="Meteo/sonde" runTimeClassModel="run()">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="46,18">
@@ -253,7 +253,7 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
   </children>
-  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.1" name="Runnable" location="788,60" size="103,95" id="java.lang/Runnable" runTimeClassModel="run()">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.1 //@children.22/@sourceConnections.0" name="Runnable" location="788,60" size="103,95" id="java.lang/Runnable" runTimeClassModel="run()">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="46,18">
       <children xsi:type="editmodel:MethodEditModel" name="run" id="java.lang/Runnable#run()"/>
@@ -333,6 +333,76 @@
       <children xsi:type="editmodel:AssociationEndEditModel" location="122,0"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Thread" location="631,426" size="418,1021" id="java.lang/Thread" runTimeClassModel="destroy(),Thread(Ljava.lang.Runnable;Ljava.lang.String;),join(J),Thread(Ljava.lang.ThreadGroup;Ljava.lang.Runnable;Ljava.lang.String;),getThreadGroup(),join(),getPriority(),toString(),getName(),stop(),run(),resume(),Thread(Ljava.lang.Runnable;),join(JI),Thread(Ljava.lang.ThreadGroup;Ljava.lang.String;),countStackFrames(),setDaemon(Z),suspend(),interrupt(),isAlive(),setName(Ljava.lang.String;),getContextClassLoader(),getState(),start(),setUncaughtExceptionHandler(Ljava.lang.Thread.UncaughtExceptionHandler;),Thread(Ljava.lang.ThreadGroup;Ljava.lang.Runnable;),java.lang.Thread.State,Thread(Ljava.lang.ThreadGroup;Ljava.lang.Runnable;Ljava.lang.String;J),getUncaughtExceptionHandler(),Thread(Ljava.lang.String;),Thread(),setContextClassLoader(Ljava.lang.ClassLoader;),getId(),clone(),checkAccess(),java.lang.Thread.UncaughtExceptionHandler,isDaemon(),isInterrupted(),stop(Ljava.lang.Throwable;),setPriority(I),getStackTrace()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="395,702">
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.ThreadGroup;Ljava.lang.Runnable;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.Runnable;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.Runnable;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.ThreadGroup;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.ThreadGroup;Ljava.lang.Runnable;Ljava.lang.String;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Thread" id="java.lang/Thread#Thread(Ljava.lang.ThreadGroup;Ljava.lang.Runnable;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="checkAccess" id="java.lang/Thread#checkAccess()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="java.lang/Thread#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="countStackFrames" id="java.lang/Thread#countStackFrames()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="destroy" id="java.lang/Thread#destroy()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getContextClassLoader" id="java.lang/Thread#getContextClassLoader()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="java.lang/Thread#getId()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="java.lang/Thread#getName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPriority" id="java.lang/Thread#getPriority()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStackTrace" id="java.lang/Thread#getStackTrace()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getState" id="java.lang/Thread#getState()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getThreadGroup" id="java.lang/Thread#getThreadGroup()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUncaughtExceptionHandler" id="java.lang/Thread#getUncaughtExceptionHandler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="interrupt" id="java.lang/Thread#interrupt()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isAlive" id="java.lang/Thread#isAlive()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isDaemon" id="java.lang/Thread#isDaemon()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isInterrupted" id="java.lang/Thread#isInterrupted()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="join" id="java.lang/Thread#join(JI)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="join" id="java.lang/Thread#join()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="join" id="java.lang/Thread#join(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="resume" id="java.lang/Thread#resume()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="java.lang/Thread#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContextClassLoader" id="java.lang/Thread#setContextClassLoader(Ljava.lang.ClassLoader;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDaemon" id="java.lang/Thread#setDaemon(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" id="java.lang/Thread#setName(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPriority" id="java.lang/Thread#setPriority(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUncaughtExceptionHandler" id="java.lang/Thread#setUncaughtExceptionHandler(Ljava.lang.Thread.UncaughtExceptionHandler;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="start" id="java.lang/Thread#start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="java.lang/Thread#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="java.lang/Thread#stop(Ljava.lang.Throwable;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="suspend" id="java.lang/Thread#suspend()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="java.lang/Thread#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="315,246">
+      <children xsi:type="editmodel:EnumerationEditModel" name="State" size="120,161" id="java.lang/Thread$State" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="97,108">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="TIMED_WAITING" id="java.lang/Thread$State#TIMED_WAITING%"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="WAITING" id="java.lang/Thread$State#WAITING%"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RUNNABLE" id="java.lang/Thread$State#RUNNABLE%"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="BLOCKED" id="java.lang/Thread$State#BLOCKED%"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="NEW" id="java.lang/Thread$State#NEW%"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="TERMINATED" id="java.lang/Thread$State#TERMINATED%"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
+      </children>
+      <children xsi:type="editmodel:InterfaceEditModel" name="UncaughtExceptionHandler" size="315,81" id="java.lang/Thread$UncaughtExceptionHandler" runTimeClassModel="uncaughtException(Ljava.lang.Thread;Ljava.lang.Throwable;)">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="292,18">
+          <children xsi:type="editmodel:MethodEditModel" name="uncaughtException" id="java.lang/Thread$UncaughtExceptionHandler#uncaughtException(Ljava.lang.Thread;Ljava.lang.Throwable;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
+      </children>
+    </children>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="java.lang/Runnable&lt;-java.lang/Thread" source="//@children.22" target="//@children.16" targetEnd="//@children.22/@sourceConnections.0/@children.1" sourceEnd="//@children.22/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="208,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,95"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showProtectedAttributes="true" showPublicAttributes="true" showProtectedMethods="true" showPublicMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
   </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
   <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
