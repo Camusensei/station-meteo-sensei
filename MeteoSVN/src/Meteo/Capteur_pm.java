@@ -4,8 +4,8 @@ import java.util.Observable;
 
 public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 
-	public Capteur_pm(Observable obs) {
-		super(obs);
+	public Capteur_pm(Observable obs,String name) {
+		super(obs,name);
 		plage_min = 0;
 		dépassement_max=false;
 		plage_max = 0;

@@ -10,9 +10,10 @@ import java.util.Collection;
 public abstract class Capteur_base implements Observer {
 
 
-	public Capteur_base (Observable obs){
+	public Capteur_base (Observable obs,String name){
 		valeur=0;
 		observable=obs;
+		nom=name;
 		// TODO unités
 		obs.addObserver(this);
 	}
@@ -28,6 +29,7 @@ public abstract class Capteur_base implements Observer {
 	private Collection<unit> unités;
 	private Observable observable;
 	protected float valeur;
+	public String nom;
 	private Object getvalue;
 	@Override
 	public void update(Observable obs, Object arg1) {

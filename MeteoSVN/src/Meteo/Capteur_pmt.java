@@ -8,8 +8,8 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 	private int where = 0;
 	private boolean init = true;
 
-	public Capteur_pmt(Observable obs) {
-		super(obs);
+	public Capteur_pmt(Observable obs,String name) {
+		super(obs,name);
 		where = 0;
 		init = true;
 		for (int i = 0; i < 5; i++) {

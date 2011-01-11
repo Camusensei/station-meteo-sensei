@@ -4,8 +4,8 @@ import java.util.Observable;
 
 public class anemomètre extends Capteur_pm {
 
-	public anemomètre(Observable obs) {
-		super(obs);
+	public anemomètre(Observable obs,String name) {
+		super(obs,name);
 	}
 
 }

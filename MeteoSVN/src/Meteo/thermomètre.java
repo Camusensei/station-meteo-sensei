@@ -4,8 +4,8 @@ import java.util.Observable;
 
 public class thermomètre extends Capteur_pmt {
 
-	public thermomètre(Observable obs) {
-		super(obs);
+	public thermomètre(Observable obs,String name) {
+		super(obs,name);
 	}
 
 }

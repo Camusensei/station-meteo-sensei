@@ -5,8 +5,8 @@ import java.util.Observable;
 public abstract class Capteur_m extends Capteur_base implements
 		I_capteur_memory {
 
-	public Capteur_m(Observable obs) {
-		super(obs);
+	public Capteur_m(Observable obs,String name) {
+		super(obs,name);
 		mem_max=0;
 		mem_min=0;
 		set=false;
