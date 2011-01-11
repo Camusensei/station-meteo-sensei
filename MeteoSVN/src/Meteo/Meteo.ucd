@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1353,1050" id="Meteo" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledX="-106" scrolledY="23" tag="1000" key="32303037303533312D31303030204D6574656F2F4D616C70686173">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1353,1050" id="Meteo" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledX="-106" scrolledY="251" tag="1000" key="32303037303533312D31303030204D6574656F2F4D616C70686173">
   <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.17/@sourceConnections.0 //@children.18/@sourceConnections.0 //@children.19/@sourceConnections.0" name="sonde" location="839,210" size="80,67" id="Meteo/sonde" runTimeClassModel="run()">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="46,18">
@@ -67,7 +67,7 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="Meteo/Capteur_pm&lt;-Meteo/Capteur_pmt" source="//@children.3" target="//@children.4" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
       <children xsi:type="editmodel:AssociationEndEditModel" location="126,0" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="126,193"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="126,228"/>
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="Meteo/I_capteur_trend&lt;-Meteo/Capteur_pmt" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
       <children xsi:type="editmodel:AssociationEndEditModel" location="253,34" attachSource="true"/>
@@ -75,10 +75,12 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.9/@sourceConnections.0 //@children.10/@sourceConnections.0" name="Capteur_pm" location="192,630" size="253,193" id="Meteo/Capteur_pm" runTimeClassModel="getPlage_min(),update(Ljava.util.Observable;Ljava.lang.Object;),setPlage_max(F),plage_max,getPlage_max(),setPlage_min(F),Capteur_pm(Ljava.util.Observable;),plage_min">
-    <children xsi:type="editmodel:CompartmentEditModel" size="98,36">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.9/@sourceConnections.0 //@children.10/@sourceConnections.0" name="Capteur_pm" location="192,630" size="253,229" id="Meteo/Capteur_pm" runTimeClassModel="getPlage_min(),update(Ljava.util.Observable;Ljava.lang.Object;),dépassement_min,dépassement_max,setPlage_max(F),plage_max,getPlage_max(),setPlage_min(F),Capteur_pm(Ljava.util.Observable;),plage_min">
+    <children xsi:type="editmodel:CompartmentEditModel" size="154,72">
       <children xsi:type="editmodel:AttributeEditModel" name="plage_max" id="Meteo/Capteur_pm#plage_max"/>
       <children xsi:type="editmodel:AttributeEditModel" name="plage_min" id="Meteo/Capteur_pm#plage_min"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dépassement_min" id="Meteo/Capteur_pm#dépassement_min"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dépassement_max" id="Meteo/Capteur_pm#dépassement_max"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="230,108">
       <children xsi:type="editmodel:MethodEditModel" name="Capteur_pm" id="Meteo/Capteur_pm#Capteur_pm(Ljava.util.Observable;)"/>
@@ -94,7 +96,7 @@
       <children xsi:type="editmodel:AssociationEndEditModel" location="129,223"/>
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="Meteo/I_capteur_plage&lt;-Meteo/Capteur_pm" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.1/@children.1" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" location="252,65" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="252,77" attachSource="true"/>
       <children xsi:type="editmodel:AssociationEndEditModel" location="0,68"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
@@ -210,15 +212,15 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="girouette" location="3,436" size="186,67" id="Meteo/girouette" runTimeClassModel="girouette(Ljava.util.Observable;)">
+  <children xsi:type="editmodel:ClassEditModel" name="girouette" location="-105,582" size="186,67" id="Meteo/girouette" runTimeClassModel="girouette(Ljava.util.Observable;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="163,18">
       <children xsi:type="editmodel:MethodEditModel" name="girouette" id="Meteo/girouette#girouette(Ljava.util.Observable;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="Meteo/Capteur_base&lt;-Meteo/girouette" source="//@children.13" target="//@children.1" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" location="107,0" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="78,175"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="161,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="24,175"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAssociationMember="true"/>
   </children>

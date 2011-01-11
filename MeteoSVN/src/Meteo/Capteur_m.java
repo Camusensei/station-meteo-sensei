@@ -22,7 +22,7 @@ public abstract class Capteur_m extends Capteur_base implements
 	 */
 	private float mem_min;
 	
-	private boolean set;
+	protected boolean set;
 
 	@Override
 	public float getMem_min() {
