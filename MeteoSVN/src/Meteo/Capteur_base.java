@@ -34,14 +34,15 @@ public abstract class Capteur_base implements Observer {
 	@Override
 	public void update(Observable obs, Object arg1) {
 		if (obs!=observable){return;}
+		// delete following lines
 		getvalue=arg1;
-		//Collection<unit> test=null;
-		//Observable test2=null;
-		//if (unités!=test) return;
-		//if (observable!=test2) return;
+		arg1=getvalue;
+		Collection<unit> test=null;
+		Observable test2=null;
+		if (unités!=test) return;
+		if (observable!=test2) return;
 		
-	}
-
+	};
 
 
 
