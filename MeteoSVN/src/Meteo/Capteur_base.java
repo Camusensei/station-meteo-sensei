@@ -27,11 +27,12 @@ public abstract class Capteur_base implements Observer {
 	 */
 	private Collection<unit> unités;
 	private Observable observable;
-	protected Object valeur;
+	protected float valeur;
+	private Object getvalue;
 	@Override
 	public void update(Observable obs, Object arg1) {
 		if (obs!=observable){return;}
-		valeur=arg1;
+		getvalue=arg1;
 		//Collection<unit> test=null;
 		//Observable test2=null;
 		//if (unités!=test) return;
