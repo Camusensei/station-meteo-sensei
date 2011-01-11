@@ -42,10 +42,6 @@ public abstract class Capteur_base implements Observer {
 		
 	}
 
-	/** 
-	 * @uml.property name="observable"
-	 * @uml.associationEnd aggregation="shared" inverse="capteur_base:java.util.Observable"
-	 */
 
 
 
