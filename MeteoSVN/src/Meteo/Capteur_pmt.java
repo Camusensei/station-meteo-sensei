@@ -55,6 +55,12 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 	@Override
 	public void update(Observable obs, Object arg1) {
 		super.update(obs, arg1);
+		last5[where]=valeur;
+		where++;
+		if (where>=5){
+			where=0;
+			init=false;
+		}
 	}
-
+	
 }
