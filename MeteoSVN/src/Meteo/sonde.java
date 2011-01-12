@@ -2,13 +2,13 @@ package Meteo;
 
 import java.util.Observable;
 
+public class sonde extends Thread {
 
-public abstract class sonde extends Observable implements Runnable {
-
-		
-		/**
-		 */
-		public void run(){
-		}
-
+	public sonde (){
+		super();
+		obs=new Observable();
+	}
+	
+	protected Observable obs;
+	
 }

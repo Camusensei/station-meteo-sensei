@@ -1,7 +1,7 @@
 package Meteo;
 
 
-public class sonde_serveur extends sonde {
+public class sonde_serveur extends Thread {
 
 		
 		/**
