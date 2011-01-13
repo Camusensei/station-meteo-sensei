@@ -1,7 +1,9 @@
 package Meteo;
 
+import java.util.Observable;
 
-public class sonde_serveur extends Thread {
+
+public class sonde_serveur extends Sonde {
 
 		
 		/**

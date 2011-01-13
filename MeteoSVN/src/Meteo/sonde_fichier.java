@@ -1,7 +1,9 @@
 package Meteo;
 
+import java.util.Observable;
 
-public class sonde_fichier extends sonde {
+
+public class sonde_fichier extends Sonde {
 
 		
 		/**
@@ -9,7 +11,8 @@ public class sonde_fichier extends sonde {
 		public sonde_fichier(String file){
 		}
 		void setData(Object param){
-		   //obs.setChanged(); // Positionne son indicateur de changement
+			Observable obs = new Observable();
+			//obs.setChanged(); // Positionne son indicateur de changement
 		    obs.notifyObservers(param); // (1) notification
 		  }
 
