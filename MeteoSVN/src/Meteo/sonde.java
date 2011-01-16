@@ -2,19 +2,23 @@ package Meteo;
 
 import java.util.Observable;
 
-public class sonde implements Runnable {
+/**
+ * @uml.dependency   supplier="Meteo.Float_object"
+ */
+public class sonde extends Observable implements Runnable {
 
 	public sonde (){
 		super();
-		obs=new Observable();
 	}
 	
 	protected Observable obs;
-
+	public void change(float new_value){
+		super.setChanged();
+		super.notifyObservers(new Float_object(new_value));
+	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		Thread sonde = new Thread();
 	}
 	
 }

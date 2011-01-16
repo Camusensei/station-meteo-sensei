@@ -1,18 +1,29 @@
 package Meteo;
 
+import java.util.List;
 import java.util.Observable;
 
 public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 
-	public Capteur_pm(Observable obs,String name) {
-		super(obs,name);
-		plage_min = 0;
-		dépassement_max=false;
-		plage_max = 0;
-		dépassement_min=false;
-		set = false;
+	public boolean dépasse_min() {
+		return dépassement_min;
 	}
 
+	public boolean dépasse_max() {
+		return dépassement_max;
+	}
+
+	public Capteur_pm(List<unit> unités, String name, 
+			Observable observable, float mem_max, float mem_min,
+			float plage_min, float plage_max) throws Exception {
+		super(unités, name, observable, mem_max, mem_min);
+		this.plage_min = plage_min;
+		this.dépassement_min = false;
+		this.plage_max = plage_max;
+		this.dépassement_max = false;
+		set=false;
+	}
+	@Override
 	public void update(Observable obs, Object arg1) {
 		super.update(obs, arg1);
 		if (valeur>plage_max){
@@ -34,9 +45,9 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	/**
 	 * @uml.property name="plage_min"
 	 */
-	private float plage_min = 0;
+	private float plage_min;
 
-	private boolean dépassement_min=false;
+	private boolean dépassement_min;
 	/**
 	 * Getter of the property <tt>plage_min</tt>
 	 * 
@@ -48,20 +59,9 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	}
 
 	/**
-	 * Setter of the property <tt>plage_min</tt>
-	 * 
-	 * @param plage_min
-	 *            The plage_min to set.
-	 * @uml.property name="plage_min"
-	 */
-	public void setPlage_min(float plage_min) {
-		this.plage_min = plage_min;
-	}
-
-	/**
 	 * @uml.property name="plage_max"
 	 */
-	private float plage_max = 0;
+	private float plage_max;
 	
 	private boolean dépassement_max;
 
@@ -75,14 +75,4 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 		return plage_max;
 	}
 
-	/**
-	 * Setter of the property <tt>plage_max</tt>
-	 * 
-	 * @param plage_max
-	 *            The plage_max to set.
-	 * @uml.property name="plage_max"
-	 */
-	public void setPlage_max(float plage_max) {
-		this.plage_max = plage_max;
-	}
 }

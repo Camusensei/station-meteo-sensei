@@ -1,17 +1,20 @@
 package Meteo;
 
+import java.util.List;
 import java.util.Observable;
 
 public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend {
 
-	private float[] last5;
+	private Float[] last5;
 	private int where = 0;
 	private boolean init = true;
 
-	public Capteur_pmt(Observable obs,String name) {
-		super(obs,name);
-		where = 0;
-		init = true;
+	public Capteur_pmt(List<unit> unités, String name, Observable observable,
+			float mem_max, float mem_min, float plage_min, float plage_max,
+			float[] last5, int where, boolean init) throws Exception {
+		super(unités, name, observable, mem_max, mem_min, plage_min, plage_max);
+		this.where = 0;
+		this.init = true;
 		for (int i = 0; i < 5; i++) {
 			last5[i] = 0;
 		}
@@ -43,7 +46,7 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 	public void clear_trend() {
 		int i;
 		for (i = 0; i < 5; i++)
-			last5[i] = 0;
+			last5[i] = 0F;
 		init = true;
 		where = 0;
 		// TODO Auto-generated method stub

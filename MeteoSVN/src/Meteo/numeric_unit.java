@@ -3,9 +3,8 @@ package Meteo;
 
 public class numeric_unit extends unit {
 	public numeric_unit(String symbol, int précision, String description){
-		super(symbol,description);
+		super(description,symbol);
 		this.précision=précision;
-		this.Description=description;
 	}
 	/**
 	 * @uml.property  name="Précision"

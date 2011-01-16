@@ -7,13 +7,13 @@ public abstract class unit {
 		Description = description;
 		Symbol = symbol;
 	}
-	protected String Description;
-	protected String Symbol;
+	private String Description;
+	private String Symbol;
 	public abstract String getFormattedValue(float valeur) throws Exception;
 	public String getDescription(){
 		return Description;
 	};
-	public String getsymbol(){
+	protected String getsymbol(){
 		return Symbol;
 	};
 
