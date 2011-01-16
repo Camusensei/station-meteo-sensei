@@ -5,20 +5,33 @@ import java.util.Observable;
 /**
  * @uml.dependency   supplier="Meteo.Float_object"
  */
-public class sonde extends Observable implements Runnable {
+public abstract class sonde extends Observable implements Runnable {
 
-	public sonde (){
+	private long milisecondes;
+	public sonde (long time_ms){
 		super();
 	}
 	
-	protected Observable obs;
 	public void change(float new_value){
 		super.setChanged();
 		super.notifyObservers(new Float_object(new_value));
 	}
+	public void setData(){
+		return;
+	}
 	@Override
-	public void run() {
-		// TODO Auto-generated method stub
+	public synchronized void run() {
+		while(true){
+			this.setData();
+			try {
+				wait(milisecondes);
+			} catch (InterruptedException e) {
+				System.out.println("La sonde a reçu une requête d'interruption !");
+				e.printStackTrace();
+				break;
+			}
+			Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+		}
 	}
 	
 }

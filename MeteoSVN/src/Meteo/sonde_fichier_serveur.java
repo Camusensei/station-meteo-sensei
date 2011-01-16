@@ -7,15 +7,16 @@ import java.io.IOException;
 
 public class sonde_fichier_serveur extends sonde {
 
-		public sonde_fichier_serveur(String fichier) {
-			super();
+		public sonde_fichier_serveur(long time_ms, String fichier) {
+			super(time_ms);
 			this.fichier = fichier;
 		}
 		/**
 		 * @uml.property  name="fichier"
 		 */
 		private String fichier;
-		void setData()
+		@Override
+		public void setData()
 		{
 			try{
 				float f; 
