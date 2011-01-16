@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Dependencies" size="1163,875" id="." metadata="uml2-1.0" initialized="true" scrolledX="222" tag="1000" key="32303037303533312D313030302062696E2F7069657272652E6D61757679">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.1/@sourceConnections.1 //@children.8/@sourceConnections.1 //@children.9/@sourceConnections.0" name="Capteur" location="511,286" size="98,30" id="/Capteur" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/AbstractCapteur&lt;-/Capteur" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,76"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="/Capteur@capteur1+/Station@station" source="//@children.0" target="//@children.9" targetEnd="//@children.0/@sourceConnections.1/@children.1" label="//@children.0/@sourceConnections.1/@children.2" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="capteur1" location="98,13" id="/Capteur@capteur1+/Station@station|/Capteur#capteur1" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.0/@sourceConnections.1/@children.0/@children.0" navigable="true" orderingKind="1">
+        <children xsi:type="editmodel:LabelEditModel" name=" - capteur1" location="616,256" size="66,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="616,284" size="6,14" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="station" location="47,0" id="/Capteur@capteur1+/Station@station|/Station#station"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Capteur-Standard::Derive->/AbstractCapteur" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.2/@children.2" label="//@children.0/@sourceConnections.2/@children.0" sourceEnd="//@children.0/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="29,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,76"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.0 //@children.15/@sourceConnections.1" name="Capteur_plage" location="407,375" size="146,76" id="/Capteur_plage" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="109,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="minPlage" id="/Capteur_plage#minPlage"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="maxPlage" id="/Capteur_plage#maxPlage"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.8/@sourceConnections.0" autoLocated="true" id="/Capteur&lt;-/Capteur_plage" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,30" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Capteur_plage-Standard::Derive->/Capteur" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.1/@children.2" label="//@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="124,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="20,30"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0 //@children.5/@sourceConnections.1 //@children.6/@sourceConnections.1" name="Capteur_prevision" location="407,660" size="178,104" id="/Capteur_prevision" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="mesures" id="/Capteur_prevision#mesures"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,18">
+      <children xsi:type="editmodel:MethodEditModel" name="tendance" id="/Capteur_prevision#tendance()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.7/@sourceConnections.0" autoLocated="true" id="/Capteur_minmax&lt;-/Capteur_prevision" source="//@children.2" target="//@children.15" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,76" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Capteur_prevision-Standard::Derive->/Capteur_minmax" source="//@children.2" target="//@children.15" targetEnd="//@children.2/@sourceConnections.1/@children.2" label="//@children.2/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="139,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="37,104"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.0/@sourceConnections.2 //@children.18/@sourceConnections.0 //@children.4/@sourceConnections.1" name="AbstractCapteur" location="479,138" size="162,112" id="/AbstractCapteur" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="valeur" id="/AbstractCapteur#valeur"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="unite" id="/AbstractCapteur#unite"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="java.util/Observer&lt;-/AbstractCapteur" source="//@children.3" target="//@children.17" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,58"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/AbstractCapteur-Soyatec::Implement->java.util/Observer" source="//@children.3" target="//@children.17" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="66,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,58"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.18/@sourceConnections.1" name="AbstractSonde" location="949,133" size="162,104" id="/AbstractSonde" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="97,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="valeur" id="/AbstractSonde#valeur"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,36">
+      <children xsi:type="editmodel:MethodEditModel" name="registerCapteur" id="/AbstractSonde#registerCapteur(LAbstractCapteur;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="unregisterCapteur" id="/AbstractSonde#unregisterCapteur(LAbstractCapteur;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="java.util/Observable&lt;-/AbstractSonde" source="//@children.4" target="//@children.16" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,44"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/AbstractSonde-Soyatec::Import->/AbstractCapteur" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,42" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="162,37"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Thermometre" location="551,732" size="130,30" id="/Thermometre" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/Capteur_prevision&lt;-/Thermometre" source="//@children.5" target="//@children.6/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="117,86"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Thermometre-Standard::Derive->/Capteur_prevision" source="//@children.5" target="//@children.2" targetEnd="//@children.5/@sourceConnections.1/@children.2" label="//@children.5/@sourceConnections.1/@children.0" sourceEnd="//@children.5/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="16,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="160,86"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Barometre" location="407,732" size="114,30" id="/Barometre" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.5/@sourceConnections.0" autoLocated="true" id="/Capteur_prevision&lt;-/Barometre" source="//@children.6" target="//@children.2" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,86" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Barometre-Standard::Derive->/Capteur_prevision" source="//@children.6" target="//@children.2" targetEnd="//@children.6/@sourceConnections.1/@children.2" label="//@children.6/@sourceConnections.1/@children.0" sourceEnd="//@children.6/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,86"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Barometre-Soyatec::Import->/Unite" source="//@children.7" target="//@children.11" targetEnd="//@children.7/@sourceConnections.2/@children.2" label="//@children.7/@sourceConnections.2/@children.0" sourceEnd="//@children.7/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="92,86"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Anemometre" location="615,596" size="122,30" id="/Anemometre" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/Capteur_minmax&lt;-/Anemometre" source="//@children.7" target="//@children.2/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="152,76"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Anemometre-Standard::Derive->/Capteur_minmax" source="//@children.7" target="//@children.15" targetEnd="//@children.7/@sourceConnections.1/@children.2" label="//@children.7/@sourceConnections.1/@children.0" sourceEnd="//@children.7/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="23,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,76"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Anemometre-Soyatec::Import->/Unite" source="//@children.8" target="//@children.11" targetEnd="//@children.8/@sourceConnections.2/@children.2" label="//@children.8/@sourceConnections.2/@children.0" sourceEnd="//@children.8/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="45,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="120,86"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Girouette" location="583,344" size="114,30" id="/Girouette" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/Capteur&lt;-/Girouette" source="//@children.8" target="//@children.1/@sourceConnections.0" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Girouette-Standard::Derive->/Capteur" source="//@children.8" target="//@children.0" targetEnd="//@children.8/@sourceConnections.1/@children.2" label="//@children.8/@sourceConnections.1/@children.0" sourceEnd="//@children.8/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="12,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="84,30"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Girouette-Soyatec::Import->/Unite" source="//@children.9" target="//@children.11" targetEnd="//@children.9/@sourceConnections.2/@children.2" label="//@children.9/@sourceConnections.2/@children.0" sourceEnd="//@children.9/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="21,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="150,74"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Girouette-Soyatec::Import->java.util/Observable" source="//@children.9" target="//@children.17" targetEnd="//@children.9/@sourceConnections.3/@children.2" label="//@children.9/@sourceConnections.3/@children.0" sourceEnd="//@children.9/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="37,44"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Girouette-Standard::Call->/Sonde*/Girouette-Standard::Instantiate->/Sonde*/Girouette-Soyatec::Import->/Sonde" source="//@children.9" target="//@children.3" targetEnd="//@children.9/@sourceConnections.4/@children.2" label="//@children.9/@sourceConnections.4/@children.0" sourceEnd="//@children.9/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="162,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="114,14" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,89"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.1" name="Station" location="765,435" size="98,30" id="/Station" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Station-Soyatec::Import->/Capteur*/Station-Soyatec::Import->/Capteur" source="//@children.9" target="//@children.0" targetEnd="//@children.9/@sourceConnections.0/@children.2" label="//@children.9/@sourceConnections.0/@children.0" sourceEnd="//@children.9/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="27,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,30"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.13/@sourceConnections.0" name="Unite" location="165,150" size="150,86" id="/Unite" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="127,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="unite_base" id="/Unite#unite_base"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,18">
+      <children xsi:type="editmodel:MethodEditModel" name="convert" location="-27,58" id="/Unite#convert(FLUnite;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Temperature" location="120,461" size="138,86" id="/Temperature" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,36">
+      <children xsi:type="editmodel:MethodEditModel" name="cel_to_fahr" id="/Temperature#cel_to_fahr(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="cal_to_kelvin" id="/Temperature#cal_to_kelvin(F)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/Unite&lt;-/Temperature" source="//@children.11" target="//@children.13/@sourceConnections.0" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="68,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,86"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Sens_vent" location="210,370" size="120,86" id="/Sens_vent" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="97,36">
+      <children xsi:type="editmodel:MethodEditModel" name="rad_to_deg" id="/Sens_vent#rad_to_deg(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rad_to_dir" id="/Sens_vent#rad_to_dir(F)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/Unite&lt;-/Sens_vent" source="//@children.12" target="//@children.13/@sourceConnections.0" targetEnd="//@children.12/@sourceConnections.0/@children.1" sourceEnd="//@children.12/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="150,71"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Vitesse" location="0,286" size="174,122" id="/Vitesse" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="151,72">
+      <children xsi:type="editmodel:MethodEditModel" name="kmh_to_ms" id="/Vitesse#kmh_to_ms(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="kmh_to_mh" id="/Vitesse#kmh_to_mh(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="kmh_to_n" id="/Vitesse#kmh_to_n(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="kmh_to_beaufort_num" id="/Vitesse#kmh_to_beaufort_num(F)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.11/@sourceConnections.0 //@children.12/@sourceConnections.0 //@children.14/@sourceConnections.0" autoLocated="true" id="/Unite&lt;-/Vitesse" source="//@children.13" target="//@children.10" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="87,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,86" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Pression" location="300,472" size="126,86" id="/Pression" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,36">
+      <children xsi:type="editmodel:MethodEditModel" name="hPa_to_mmHg" id="/Pression#hPa_to_mmHg(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hPa_to_poHg" id="/Pression#hPa_to_poHg(F)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/Unite&lt;-/Pression" source="//@children.14" target="//@children.13/@sourceConnections.0" targetEnd="//@children.14/@sourceConnections.0/@children.1" sourceEnd="//@children.14/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="62,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="131,86"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.2/@sourceConnections.1 //@children.7/@sourceConnections.1" name="Capteur_minmax" location="509,501" size="154,104" id="/Capteur_minmax" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="maximum" id="/Capteur_minmax#maximum"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="minimum" id="/Capteur_minmax#minimum"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="/Capteur_plage&lt;-/Capteur_minmax" source="//@children.15" target="//@children.1" targetEnd="//@children.15/@sourceConnections.0/@children.0" sourceEnd="//@children.15/@sourceConnections.0/@children.1" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,76"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Capteur_minmax-Standard::Derive->/Capteur_plage" source="//@children.15" target="//@children.1" targetEnd="//@children.15/@sourceConnections.1/@children.2" label="//@children.15/@sourceConnections.1/@children.0" sourceEnd="//@children.15/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="21,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,76"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="Observable" location="969,39" size="122,44" id="java.util/Observable" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.3/@sourceConnections.1" name="Observer" location="507,30" size="106,58" id="java.util/Observer" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Sonde_fichier" location="885,287" size="146,58" id="/Sonde_fichier" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="delai" id="/Sonde_fichier#delai"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="/Sonde_fichier-Soyatec::Import->/AbstractCapteur" source="//@children.18" target="//@children.3" targetEnd="//@children.18/@sourceConnections.0/@children.2" label="//@children.18/@sourceConnections.0/@children.0" sourceEnd="//@children.18/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="48,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,7" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="162,81"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.19/@sourceConnections.0" autoLocated="true" id="/AbstractSonde&lt;-/Sonde_fichier" source="//@children.18" target="//@children.4" targetEnd="//@children.18/@sourceConnections.1/@children.1" sourceEnd="//@children.18/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,104" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Sonde" location="1061,287" size="120,112" id="/Sonde" runTimeClassModel="delai,valMax,valMin,varMax">
+    <children xsi:type="editmodel:CompartmentEditModel" size="97,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="valMin" id="/Sonde#valMin"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="valMax" id="/Sonde#valMax"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="varMax" id="/Sonde#varMax"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="delai" id="/Sonde#delai"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="/AbstractSonde&lt;-/Sonde" source="//@children.19" target="//@children.18/@sourceConnections.1" targetEnd="//@children.19/@sourceConnections.0/@children.1" sourceEnd="//@children.19/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="wireOptions=4;Product=eUML2;displayOptions=1"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+</editmodel:ClassDiagramEditModel>
