@@ -18,7 +18,7 @@ import java.awt.event.ActionListener;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.MediaTracker;
-import java.awt.Toolkit; 
+import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
 import javax.swing.JComboBox;
@@ -31,20 +31,18 @@ public class fenêtre extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 6312420591838409456L;
 	private JFrame frame;
 
-	/**creates an image*/
+	/** creates an image */
 	/** Returns an ImageIcon, or null if the path was invalid. */
-	protected ImageIcon createImageIcon(String path,
-	                                           String description) {
-	    java.net.URL imgURL = getClass().getResource(path);
-	    if (imgURL != null) {
-	        return new ImageIcon(imgURL, description);
-	    } else {
-	        System.err.println("Couldn't find file: " + path);
-	        return null;
-	    }
+	protected ImageIcon createImageIcon(String path, String description) {
+		java.net.URL imgURL = getClass().getResource(path);
+		if (imgURL != null) {
+			return new ImageIcon(imgURL, description);
+		} else {
+			System.err.println("Couldn't find file: " + path);
+			return null;
+		}
 	}
 
-	
 	/**
 	 * Launch the application.
 	 */
@@ -76,12 +74,12 @@ public class fenêtre extends JFrame implements ActionListener {
 	 * @throws Exception
 	 */
 	private void initialize() throws Exception {
-		ImageIcon rosace = createImageIcon("images/Brosen.png","");
-		ImageIcon VVert = createImageIcon("images/vvert.png","");
-		ImageIcon VRouge = createImageIcon("images/vrouge.png","");
-		ImageIcon flècheH = createImageIcon("images/flecheh.png","");
-		ImageIcon flècheM = createImageIcon("images/flechem.png","");
-		ImageIcon flècheB = createImageIcon("images/flecheb.png","");
+		ImageIcon rosace = createImageIcon("images/Brosen.png", "");
+		ImageIcon VVert = createImageIcon("images/vvert.png", "");
+		ImageIcon VRouge = createImageIcon("images/vrouge.png", "");
+		ImageIcon flècheH = createImageIcon("images/flecheh.png", "");
+		ImageIcon flècheM = createImageIcon("images/flechem.png", "");
+		ImageIcon flècheB = createImageIcon("images/flecheb.png", "");
 
 		frame = new JFrame();
 		frame.setBounds(100, 100, 1100, 400);
@@ -122,10 +120,10 @@ public class fenêtre extends JFrame implements ActionListener {
 		panel.add(panel_1);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
 		gbl_panel_1.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-		gbl_panel_1.rowHeights = new int[] { 0, 0 };
-		gbl_panel_1.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 0.0,
-				0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
-		gbl_panel_1.rowWeights = new double[] { 0.0, Double.MIN_VALUE };
+		gbl_panel_1.rowHeights = new int[] { 0, 0, 0 };
+		gbl_panel_1.columnWeights = new double[] { 1.0, 1.0, 1.0, 1.0, 1.0,
+				1.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE };
+		gbl_panel_1.rowWeights = new double[] { 1.0, 1.0, Double.MIN_VALUE };
 		panel_1.setLayout(gbl_panel_1);
 
 		for (int i = 0; i < Capteur_base.count_observers(); i++) {
@@ -237,6 +235,21 @@ public class fenêtre extends JFrame implements ActionListener {
 				gbc_btnClearTendance.gridx = 8;
 				gbc_btnClearTendance.gridy = i;
 				panel_1.add(btnClearTendance, gbc_btnClearTendance);
+
+				if (Capteur_base.capteurs.get(i) instanceof Capteur_pm) {
+
+					JLabel lblmin = new JLabel("min");
+					GridBagConstraints gbc_lblmin = new GridBagConstraints();
+					gbc_lblHautDroiteHeure.gridx = 9;
+					gbc_lblHautDroiteHeure.gridy = i;
+					panel_1.add(lblmin, gbc_lblmin);
+
+					JLabel lblmax = new JLabel("max");
+					GridBagConstraints gbc_lblmax = new GridBagConstraints();
+					gbc_lblHautDroiteHeure.gridx = 10;
+					gbc_lblHautDroiteHeure.gridy = i;
+					panel_1.add(lblmax, gbc_lblmax);
+				}
 			}
 		}
 		JPanel panel_2 = new JPanel();
