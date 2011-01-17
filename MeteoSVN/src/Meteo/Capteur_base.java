@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
+import javax.swing.ComboBoxModel;
+
 /**
  * @uml.dependency   supplier="Meteo.unit"
  */
@@ -41,8 +43,8 @@ public abstract class Capteur_base implements Observer {
 	 * @uml.associationEnd multiplicity="(1 -1)" aggregation="shared" inverse="capteur_base:Meteo.unit"
 	 */
 	private List<unit> unités;
-	public List<unit> getUnités() {
-		return unités;
+	public Object[] getUnités() {
+		return ((Object[]) (unités.toArray()));
 	}
 
 	private unit unit_chosen;

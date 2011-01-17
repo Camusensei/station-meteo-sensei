@@ -130,8 +130,8 @@ public class fenêtre extends JFrame implements ActionListener {
 			gbc_lblValeur.gridy = i;
 			panel_1.add(lblValeur, gbc_lblValeur);
 
-			JComboBox comboBox = new JComboBox(
-					(ComboBoxModel) capteur.getUnités());
+			Object[] elements = capteur.getUnités();
+			JComboBox comboBox = new JComboBox(elements);
 			GridBagConstraints gbc_comboBox = new GridBagConstraints();
 			gbc_comboBox.insets = new Insets(0, 0, 0, 5);
 			gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
@@ -207,5 +207,11 @@ public class fenêtre extends JFrame implements ActionListener {
 		JLabel label_5 = new JLabel("");
 		label_5.setIcon(null);
 		panel_2.add(label_5);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
