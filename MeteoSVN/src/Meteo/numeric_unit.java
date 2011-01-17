@@ -13,7 +13,8 @@ public class numeric_unit extends unit {
 
 	@Override
 	public String getFormattedValue(float valeur) {
-		return valeur + " " + this.getsymbol();
+		int intermédiaire = (int) (valeur * Math.pow(10,précision)) ;
+		return ""+(float) intermédiaire / Math.pow(10,précision);
 	}
 
 }

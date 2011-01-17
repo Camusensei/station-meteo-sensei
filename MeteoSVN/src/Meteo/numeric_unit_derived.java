@@ -14,7 +14,7 @@ public class numeric_unit_derived extends numeric_unit {
 
 	@Override
 	public String getFormattedValue(float valeur) {
-		return (valeur * multiplicateur + décalage) + " " + this.getsymbol();
+		int intermédiaire = (int) ((valeur * multiplicateur + décalage) * Math.pow(10,précision));
+		return ""+(float) intermédiaire / Math.pow(10,précision);
 	}
-
 }

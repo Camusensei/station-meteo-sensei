@@ -3,7 +3,6 @@ package Meteo;
 import java.awt.EventQueue;
 
 import javax.swing.AbstractAction;
-import javax.swing.ComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JSplitPane;
 import java.awt.BorderLayout;
@@ -26,6 +25,10 @@ import javax.swing.JComboBox;
 
 public class fenêtre extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6312420591838409456L;
 	private JFrame frame;
 
 	/**creates an image*/
@@ -60,15 +63,19 @@ public class fenêtre extends JFrame implements ActionListener {
 
 	/**
 	 * Create the application.
+	 * 
+	 * @throws Exception
 	 */
-	public fenêtre() {
+	public fenêtre() throws Exception {
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
+	 * 
+	 * @throws Exception
 	 */
-	private void initialize() {
+	private void initialize() throws Exception {
 		ImageIcon rosace = createImageIcon("images/Brosen.png","");
 		ImageIcon VVert = createImageIcon("images/vverts.png","");
 		ImageIcon VRouge = createImageIcon("images/vrouge.png.gif","");
@@ -131,14 +138,14 @@ public class fenêtre extends JFrame implements ActionListener {
 			gbc_lblImageEtat.gridy = i;
 			panel_1.add(lblImageEtat, gbc_lblImageEtat);
 
-			final JLabel lblValeur = new JLabel("" + capteur.getValeur());
+			final JLabel lblValeur = new JLabel(capteur.getValeur());
 			GridBagConstraints gbc_lblValeur = new GridBagConstraints();
 			gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
 			gbc_lblValeur.anchor = GridBagConstraints.EAST;
 			gbc_lblValeur.gridx = 2;
 			gbc_lblValeur.gridy = i;
 			panel_1.add(lblValeur, gbc_lblValeur);
-			
+
 			JButton btnNomCapteur = new JButton(
 					new AbstractAction(capteur.name) {
 
@@ -146,7 +153,12 @@ public class fenêtre extends JFrame implements ActionListener {
 
 						@Override
 						public void actionPerformed(ActionEvent e) {
-							lblValeur.setText("" + capteur.getValeur());
+							try {
+								lblValeur.setText("" + capteur.getValeur());
+							} catch (Exception e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 						}
 
 					});
@@ -238,6 +250,6 @@ public class fenêtre extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
