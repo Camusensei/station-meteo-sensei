@@ -5,7 +5,7 @@ import java.util.Observable;
 
 public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend {
 
-	private Float[] last5;
+	private Float[] last5 = {0F,0F,0F,0F,0F};
 	private int where = 0;
 	private boolean init = true;
 
@@ -17,12 +17,8 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 	public Capteur_pmt(List<unit> unités, String name, Observable observable,
 			float plage_min, float plage_max) throws Exception {
 		super(unités, name, observable, plage_min, plage_max);
-		this.where = 0;
-		this.init = true;
-		for (int i = 0; i < 5; i++) {
-			last5[i] = 0F;
+		this.clear_trend();
 		}
-	}
 
 	public float get_trend() {
 		float trend = 0;
@@ -53,8 +49,6 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 			last5[i] = 0F;
 		init = true;
 		where = 0;
-		// TODO Auto-generated method stub
-
 	}
 
 	/**

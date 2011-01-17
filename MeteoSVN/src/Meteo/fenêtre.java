@@ -100,14 +100,16 @@ public class fenêtre {
 			gbc_lblImageEtat.gridy = i;
 			panel_1.add(lblImageEtat, gbc_lblImageEtat);
 
-			JButton btnNomCapteur = new JButton(Capteur_base.capteurs.get(i).name);
+			JButton btnNomCapteur = new JButton(
+					Capteur_base.capteurs.get(i).name);
 			GridBagConstraints gbc_btnNomCapteur = new GridBagConstraints();
 			gbc_btnNomCapteur.insets = new Insets(0, 0, 0, 5);
 			gbc_btnNomCapteur.gridx = 1;
 			gbc_btnNomCapteur.gridy = i;
 			panel_1.add(btnNomCapteur, gbc_btnNomCapteur);
 
-			JLabel lblValeur = new JLabel(""+Capteur_base.capteurs.get(i).valeur);
+			JLabel lblValeur = new JLabel(""
+					+ Capteur_base.capteurs.get(i).valeur);
 			GridBagConstraints gbc_lblValeur = new GridBagConstraints();
 			gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
 			gbc_lblValeur.anchor = GridBagConstraints.EAST;
@@ -123,35 +125,50 @@ public class fenêtre {
 			gbc_comboBox.gridy = i;
 			panel_1.add(comboBox, gbc_comboBox);
 
-			JLabel lblDpassement = new JLabel("d\u00E9passement");
-			GridBagConstraints gbc_lblDpassement = new GridBagConstraints();
-			gbc_lblDpassement.insets = new Insets(0, 0, 0, 5);
-			gbc_lblDpassement.gridx = 4;
-			gbc_lblDpassement.gridy = i;
-			panel_1.add(lblDpassement, gbc_lblDpassement);
+			if (Capteur_base.capteurs.get(i) instanceof Capteur_pm) {
+				
+				Capteur_pm capteur_pm = (Capteur_pm) Capteur_base.capteurs.get(i);
+				JLabel lblDpassement;
+				if (capteur_pm.dépasse_max()) lblDpassement = new JLabel("d\u00E9passement max");
+				else if (capteur_pm.dépasse_min()) lblDpassement = new JLabel("d\u00E9passement min");
+				else lblDpassement = new JLabel("");
+				
+				GridBagConstraints gbc_lblDpassement = new GridBagConstraints();
+				gbc_lblDpassement.insets = new Insets(0, 0, 0, 5);
+				gbc_lblDpassement.gridx = 4;
+				gbc_lblDpassement.gridy = i;
+				panel_1.add(lblDpassement, gbc_lblDpassement);
 
-			JButton btnResetMinmax = new JButton("reset minmax");
-			GridBagConstraints gbc_btnResetMinmax = new GridBagConstraints();
-			gbc_btnResetMinmax.insets = new Insets(0, 0, 0, 5);
-			gbc_btnResetMinmax.gridx = 5;
-			gbc_btnResetMinmax.gridy = i;
-			panel_1.add(btnResetMinmax, gbc_btnResetMinmax);
+				JButton btnResetMinmax = new JButton("reset min/max");
+				GridBagConstraints gbc_btnResetMinmax = new GridBagConstraints();
+				gbc_btnResetMinmax.insets = new Insets(0, 0, 0, 5);
+				gbc_btnResetMinmax.gridx = 5;
+				gbc_btnResetMinmax.gridy = i;
+				panel_1.add(btnResetMinmax, gbc_btnResetMinmax);
+			}
 
-			JLabel lblAheuzegaga = new JLabel("aheuzegaga");
-			lblAheuzegaga.setIcon(null);
-			GridBagConstraints gbc_lblAheuzegaga = new GridBagConstraints();
-			gbc_lblAheuzegaga.insets = new Insets(0, 0, 0, 5);
-			gbc_lblAheuzegaga.gridwidth = 2;
-			gbc_lblAheuzegaga.gridx = 6;
-			gbc_lblAheuzegaga.gridy = i;
-			panel_1.add(lblAheuzegaga, gbc_lblAheuzegaga);
+			if (Capteur_base.capteurs.get(i) instanceof Capteur_pmt) {
 
-			JButton btnClearTendance = new JButton("clear tendance");
-			GridBagConstraints gbc_btnClearTendance = new GridBagConstraints();
-			gbc_btnClearTendance.insets = new Insets(0, 0, 0, 5);
-			gbc_btnClearTendance.gridx = 8;
-			gbc_btnClearTendance.gridy = i;
-			panel_1.add(btnClearTendance, gbc_btnClearTendance);
+				Capteur_pmt capteur_pmt = (Capteur_pmt) Capteur_base.capteurs.get(i);
+				float trend = capteur_pmt.get_trend();
+				JLabel lblTrend = new JLabel("" + trend);
+				if (trend>0) lblTrend.setIcon(null);
+				if (trend<0) lblTrend.setIcon(null);
+				if (trend==0) lblTrend.setIcon(null);
+				GridBagConstraints gbc_lblTrend = new GridBagConstraints();
+				gbc_lblTrend.insets = new Insets(0, 0, 0, 5);
+				gbc_lblTrend.gridwidth = 2;
+				gbc_lblTrend.gridx = 6;
+				gbc_lblTrend.gridy = i;
+				panel_1.add(lblTrend, gbc_lblTrend);
+
+				JButton btnClearTendance = new JButton("clear tendance");
+				GridBagConstraints gbc_btnClearTendance = new GridBagConstraints();
+				gbc_btnClearTendance.insets = new Insets(0, 0, 0, 5);
+				gbc_btnClearTendance.gridx = 8;
+				gbc_btnClearTendance.gridy = i;
+				panel_1.add(btnClearTendance, gbc_btnClearTendance);
+			}
 		}
 		JPanel panel_2 = new JPanel();
 		splitPane.setLeftComponent(panel_2);

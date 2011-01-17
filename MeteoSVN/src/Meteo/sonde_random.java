@@ -22,6 +22,6 @@ public class sonde_random extends sonde {
 
 	@Override
 	public void setData() {
-		super.change((r.nextFloat() * (Math.abs(max - min))) - min);
+		super.change(min+((max-min+1)*r.nextFloat()));
 	};
 }
