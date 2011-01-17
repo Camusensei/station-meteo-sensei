@@ -13,8 +13,7 @@ public abstract class Capteur_base implements Observer {
 
 	public static Collection<Capteur_base> capteurs=new ArrayList<Capteur_base>();
 	
-	public Capteur_base(List<unit> unités, String name, 
-			Observable observable) throws Exception {
+	public Capteur_base(List<unit> unités, String name, Observable observable) throws Exception {
 		super();
 		this.unités = unités;
 		if (unités.isEmpty()) throw new Exception("Capteur de base : Liste d'unités vide !");

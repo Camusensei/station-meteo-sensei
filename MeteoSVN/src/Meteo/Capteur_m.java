@@ -3,8 +3,7 @@ package Meteo;
 import java.util.List;
 import java.util.Observable;
 
-public abstract class Capteur_m extends Capteur_base implements
-		I_capteur_memory {
+public abstract class Capteur_m extends Capteur_base implements I_capteur_memory {
 
 	public Capteur_m(List<unit> unités, String name, Observable observable) throws Exception {
 		super(unités, name, observable);
