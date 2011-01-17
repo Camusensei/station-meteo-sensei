@@ -77,8 +77,8 @@ public class fenêtre extends JFrame implements ActionListener {
 	 */
 	private void initialize() throws Exception {
 		ImageIcon rosace = createImageIcon("images/Brosen.png","");
-		ImageIcon VVert = createImageIcon("images/vverts.png","");
-		ImageIcon VRouge = createImageIcon("images/vrouge.png.gif","");
+		ImageIcon VVert = createImageIcon("images/vvert.png","");
+		ImageIcon VRouge = createImageIcon("images/vrouge.png","");
 		ImageIcon flècheH = createImageIcon("images/flecheh.png","");
 		ImageIcon flècheM = createImageIcon("images/flechem.png","");
 		ImageIcon flècheB = createImageIcon("images/flecheb.png","");
@@ -130,8 +130,8 @@ public class fenêtre extends JFrame implements ActionListener {
 
 		for (int i = 0; i < Capteur_base.count_observers(); i++) {
 			final Capteur_base capteur = Capteur_base.capteurs.get(i);
-			JLabel lblImageEtat = new JLabel("image etat");
-			lblImageEtat.setIcon(null);
+			JLabel lblImageEtat = new JLabel("");
+			lblImageEtat.setIcon(VVert);
 			GridBagConstraints gbc_lblImageEtat = new GridBagConstraints();
 			gbc_lblImageEtat.insets = new Insets(0, 0, 0, 5);
 			gbc_lblImageEtat.gridx = 0;
