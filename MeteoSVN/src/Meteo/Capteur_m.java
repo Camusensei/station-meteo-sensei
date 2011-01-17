@@ -6,11 +6,10 @@ import java.util.Observable;
 public abstract class Capteur_m extends Capteur_base implements
 		I_capteur_memory {
 
-	public Capteur_m(List<unit> unités, String name, 
-			Observable observable, float mem_max, float mem_min) throws Exception {
+	public Capteur_m(List<unit> unités, String name, Observable observable) throws Exception {
 		super(unités, name, observable);
-		this.mem_max = mem_max;
-		this.mem_min = mem_min;
+		this.mem_max = 0F;
+		this.mem_min = 0F;
 		this.set = false;
 	}
 	

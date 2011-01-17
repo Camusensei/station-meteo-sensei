@@ -19,9 +19,9 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	}
 
 	public Capteur_pm(List<unit> unités, String name, 
-			Observable observable, float mem_max, float mem_min,
-			float plage_min, float plage_max) throws Exception {
-		super(unités, name, observable, mem_max, mem_min);
+			Observable observable, float plage_min, 
+			float plage_max) throws Exception {
+		super(unités, name, observable);
 		this.plage_min = plage_min;
 		this.dépassement_min = false;
 		this.plage_max = plage_max;

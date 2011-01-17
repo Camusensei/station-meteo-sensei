@@ -15,13 +15,12 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 	}
 
 	public Capteur_pmt(List<unit> unités, String name, Observable observable,
-			float mem_max, float mem_min, float plage_min, float plage_max,
-			float[] last5, int where, boolean init) throws Exception {
-		super(unités, name, observable, mem_max, mem_min, plage_min, plage_max);
+			float plage_min, float plage_max) throws Exception {
+		super(unités, name, observable, plage_min, plage_max);
 		this.where = 0;
 		this.init = true;
 		for (int i = 0; i < 5; i++) {
-			last5[i] = 0;
+			last5[i] = 0F;
 		}
 	}
 
