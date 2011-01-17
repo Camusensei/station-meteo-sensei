@@ -100,7 +100,8 @@ public class Launcher {
 		new Thread((Runnable) Random0_360).start();
 		Capteur_base capteur=new girouette(unités_direction, "girouette", Random0_360);
 		System.out.println(capteur);
-		Meteo.fenêtre.main(null);
+		//Meteo.fenêtre.main(null);
+		new console().run();
 	}
 
 }

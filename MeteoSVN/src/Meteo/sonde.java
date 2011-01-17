@@ -15,7 +15,7 @@ public abstract class sonde extends Observable implements Runnable {
 	
 	public void change(float new_value){
 		super.setChanged();
-		super.notifyObservers(new Float_object(new_value));
+		super.notifyObservers(new_value);
 	}
 	public void setData(){
 		return;

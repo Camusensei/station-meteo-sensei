@@ -1,0 +1,24 @@
+package Meteo;
+
+import java.io.IOException;
+
+public class console implements Runnable {
+
+	private int val;
+	
+	@Override
+	public synchronized void run() {
+		while(true){
+				try {
+					val=System.in.read();
+				} catch (IOException e) {
+					e.printStackTrace();
+					break;
+				}
+				System.out.println(val);
+						
+			Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+		}
+	}
+
+}
