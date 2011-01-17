@@ -84,7 +84,7 @@ public class fenêtre extends JFrame implements ActionListener {
 		ImageIcon flècheB = createImageIcon("images/flecheb.png","");
 
 		frame = new JFrame();
-		frame.setBounds(100, 100, 757, 400);
+		frame.setBounds(100, 100, 1100, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		JSplitPane splitPane = new JSplitPane();
