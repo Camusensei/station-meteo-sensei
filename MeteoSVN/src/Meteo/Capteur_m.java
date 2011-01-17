@@ -3,18 +3,20 @@ package Meteo;
 import java.util.List;
 import java.util.Observable;
 
-public abstract class Capteur_m extends Capteur_base implements I_capteur_memory {
+public abstract class Capteur_m extends Capteur_base implements
+		I_capteur_memory {
 
-	public Capteur_m(List<unit> unités, String name, Observable observable) throws Exception {
+	public Capteur_m(List<unit> unités, String name, Observable observable)
+			throws Exception {
 		super(unités, name, observable);
 		this.mem_max = 0F;
 		this.mem_min = 0F;
 		this.set = false;
 	}
-	
+
 	@Override
-	public String toString(){
-		return(super.toString()+" min="+this.mem_min+" max="+this.mem_max);
+	public String toString() {
+		return (super.toString() + " min=" + this.mem_min + " max=" + this.mem_max);
 	}
 
 	/**
@@ -26,7 +28,7 @@ public abstract class Capteur_m extends Capteur_base implements I_capteur_memory
 	 * @uml.property name="mem_min"
 	 */
 	private float mem_min;
-	
+
 	protected boolean set;
 
 	@Override
@@ -54,10 +56,10 @@ public abstract class Capteur_m extends Capteur_base implements I_capteur_memory
 		 */
 	public void update(Observable obs, Object arg1) {
 		super.update(obs, arg1);
-		if (set==false){
-			mem_max=valeur;
-			mem_min=valeur;
-			set=true;
+		if (set == false) {
+			mem_max = valeur;
+			mem_min = valeur;
+			set = true;
 		}
 		if (valeur > mem_max) {
 			mem_max = valeur;
@@ -68,8 +70,8 @@ public abstract class Capteur_m extends Capteur_base implements I_capteur_memory
 	}
 
 	public void reset() {
-		mem_min=valeur;
-		mem_max=valeur;
+		mem_min = valeur;
+		mem_max = valeur;
 	}
 
 }

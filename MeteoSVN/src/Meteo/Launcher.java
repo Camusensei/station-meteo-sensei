@@ -6,7 +6,7 @@ public class Launcher {
 
 	/**
 	 * @param args
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		Preparation.create_units();

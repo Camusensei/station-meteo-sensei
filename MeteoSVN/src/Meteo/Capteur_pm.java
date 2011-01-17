@@ -12,37 +12,38 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	public boolean dépasse_max() {
 		return dépassement_max;
 	}
-	
+
 	@Override
-	public String toString(){
-		return(super.toString()+" plageMin="+this.plage_min+" dépassement-="+this.dépassement_min+" plageMax="+this.plage_max+" dépassement+="+this.dépassement_max);
+	public String toString() {
+		return (super.toString() + " plageMin=" + this.plage_min
+				+ " dépassement-=" + this.dépassement_min + " plageMax="
+				+ this.plage_max + " dépassement+=" + this.dépassement_max);
 	}
 
-	public Capteur_pm(List<unit> unités, String name, Observable observable, 
+	public Capteur_pm(List<unit> unités, String name, Observable observable,
 			float plage_min, float plage_max) throws Exception {
 		super(unités, name, observable);
 		this.plage_min = plage_min;
 		this.dépassement_min = false;
 		this.plage_max = plage_max;
 		this.dépassement_max = false;
-		set=false;
+		set = false;
 	}
+
 	@Override
 	public void update(Observable obs, Object arg1) {
 		super.update(obs, arg1);
-		if (valeur>plage_max){
-			dépassement_max=true;
-			valeur=plage_max;
+		if (valeur > plage_max) {
+			dépassement_max = true;
+			valeur = plage_max;
+		} else {
+			dépassement_max = false;
 		}
-		else {
-			dépassement_max=false;
-		}
-		if (valeur<plage_min){
-			dépassement_min=true;
-			valeur=plage_min;
-		}
-		else {
-			dépassement_min=false;
+		if (valeur < plage_min) {
+			dépassement_min = true;
+			valeur = plage_min;
+		} else {
+			dépassement_min = false;
 		}
 	}
 
@@ -52,6 +53,7 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	private float plage_min;
 
 	private boolean dépassement_min;
+
 	/**
 	 * Getter of the property <tt>plage_min</tt>
 	 * 
@@ -66,7 +68,7 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	 * @uml.property name="plage_max"
 	 */
 	private float plage_max;
-	
+
 	private boolean dépassement_max;
 
 	/**

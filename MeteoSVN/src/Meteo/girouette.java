@@ -10,5 +10,4 @@ public class girouette extends Capteur_base {
 		super(unités, name, observable);
 	}
 
-
 }

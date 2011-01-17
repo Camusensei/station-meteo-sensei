@@ -1,7 +1,6 @@
 package Meteo;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
@@ -11,7 +10,7 @@ import java.util.Observer;
  */
 public abstract class Capteur_base implements Observer {
 
-	public static Collection<Capteur_base> capteurs=new ArrayList<Capteur_base>();
+	public static ArrayList<Capteur_base> capteurs=new ArrayList<Capteur_base>();
 	
 	public Capteur_base(List<unit> unités, String name, Observable observable) throws Exception {
 		super();
@@ -67,7 +66,8 @@ public abstract class Capteur_base implements Observer {
 		if (obs!=observable) return;
 		valeur=(Float)arg1;
 	}
-	public String current_value() throws Exception{
-		  return unit_chosen.getFormattedValue(valeur);
+
+	public String current_value() throws Exception {
+		return unit_chosen.getFormattedValue(valeur);
 	};
 }
