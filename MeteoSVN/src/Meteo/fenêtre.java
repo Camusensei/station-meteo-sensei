@@ -91,6 +91,7 @@ public class fenêtre {
 		panel_1.setLayout(gbl_panel_1);
 
 		for (int i = 0; i < Capteur_base.count_observers(); i++) {
+
 			JLabel lblImageEtat = new JLabel("image etat");
 			lblImageEtat.setIcon(null);
 			GridBagConstraints gbc_lblImageEtat = new GridBagConstraints();
