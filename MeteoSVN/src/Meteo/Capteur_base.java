@@ -32,7 +32,6 @@ public abstract class Capteur_base implements Observer {
 	}
 	
 	public static int count_observers(){
-		System.out.println(capteurs.size());
 		return capteurs.size();
 	};
 	public void del_observer (){
