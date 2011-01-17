@@ -141,12 +141,12 @@ public class Preparation {
 		/* CRÉATION DES CAPTEURS */
 		sonde_random Random0_360 = new sonde_random(1000L, 0, 360);
 		new Thread((Runnable) Random0_360).start();
-		Capteur_base capteur1 = new girouette(Preparation.unités_direction,"girouette", Random0_360);
+		Capteur_base capteur1 = new girouette(Random0_360);
 		sonde_random Random_10_40 = new sonde_random(1000L, -10, 40);
-		new Thread((Runnable) Random_10_40 ).start();
-		Capteur_pmt capteur2 = new thermomètre(unités_températures, "thermomètre", Random_10_40 , -10F, 40F);
-		sonde_random Random0_1 = new sonde_random(1000L,0,1);
-		new Thread((Runnable) Random0_1 ).start();
-		Capteur_pm capteur3 = new hygromètre(unités_humidité, "hygromètre", Random0_1, 0, 1);
+		new Thread((Runnable) Random_10_40).start();
+		Capteur_pmt capteur2 = new thermomètre(Random_10_40, -10F, 40F);
+		sonde_random Random0_1 = new sonde_random(1000L, 0, 1);
+		new Thread((Runnable) Random0_1).start();
+		Capteur_pm capteur3 = new hygromètre(Random0_1, 0, 1);
 	};
 }

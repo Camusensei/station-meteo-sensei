@@ -1,14 +1,13 @@
 package Meteo;
 
-import java.util.List;
 import java.util.Observable;
 
 public class hygromètre extends Capteur_pm {
 
-	public hygromètre(List<unit> unités, String name, Observable observable,
-			float plage_min, float plage_max) throws Exception {
-		super(unités, name, observable, plage_min, plage_max);
-		// TODO Auto-generated constructor stub
+	public hygromètre(Observable observable, float plage_min, float plage_max)
+			throws Exception {
+		super(Preparation.unités_humidité, "Hygromètre", observable, plage_min,
+				plage_max);
 	}
 
 }

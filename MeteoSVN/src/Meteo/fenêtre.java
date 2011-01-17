@@ -2,6 +2,8 @@ package Meteo;
 
 import java.awt.EventQueue;
 
+import javax.swing.AbstractAction;
+import javax.swing.ComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JSplitPane;
 import java.awt.BorderLayout;
@@ -12,9 +14,12 @@ import javax.swing.JLabel;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JComboBox;
 
-public class fenêtre {
+public class fenêtre extends JFrame implements ActionListener {
 
 	private JFrame frame;
 
@@ -91,7 +96,7 @@ public class fenêtre {
 		panel_1.setLayout(gbl_panel_1);
 
 		for (int i = 0; i < Capteur_base.count_observers(); i++) {
-
+			final Capteur_base capteur = Capteur_base.capteurs.get(i);
 			JLabel lblImageEtat = new JLabel("image etat");
 			lblImageEtat.setIcon(null);
 			GridBagConstraints gbc_lblImageEtat = new GridBagConstraints();
@@ -101,15 +106,23 @@ public class fenêtre {
 			panel_1.add(lblImageEtat, gbc_lblImageEtat);
 
 			JButton btnNomCapteur = new JButton(
-					Capteur_base.capteurs.get(i).name);
+					new AbstractAction(capteur.name) {
+
+						private static final long serialVersionUID = 4096066833790772722L;
+
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							capteur.getValeur();
+						}
+
+					});
 			GridBagConstraints gbc_btnNomCapteur = new GridBagConstraints();
 			gbc_btnNomCapteur.insets = new Insets(0, 0, 0, 5);
 			gbc_btnNomCapteur.gridx = 1;
 			gbc_btnNomCapteur.gridy = i;
 			panel_1.add(btnNomCapteur, gbc_btnNomCapteur);
 
-			JLabel lblValeur = new JLabel(""
-					+ Capteur_base.capteurs.get(i).valeur);
+			JLabel lblValeur = new JLabel("" + capteur.valeur);
 			GridBagConstraints gbc_lblValeur = new GridBagConstraints();
 			gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
 			gbc_lblValeur.anchor = GridBagConstraints.EAST;
@@ -117,7 +130,8 @@ public class fenêtre {
 			gbc_lblValeur.gridy = i;
 			panel_1.add(lblValeur, gbc_lblValeur);
 
-			JComboBox comboBox = new JComboBox();
+			JComboBox comboBox = new JComboBox(
+					(ComboBoxModel) capteur.getUnités());
 			GridBagConstraints gbc_comboBox = new GridBagConstraints();
 			gbc_comboBox.insets = new Insets(0, 0, 0, 5);
 			gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
@@ -126,13 +140,17 @@ public class fenêtre {
 			panel_1.add(comboBox, gbc_comboBox);
 
 			if (Capteur_base.capteurs.get(i) instanceof Capteur_pm) {
-				
-				Capteur_pm capteur_pm = (Capteur_pm) Capteur_base.capteurs.get(i);
+
+				Capteur_pm capteur_pm = (Capteur_pm) Capteur_base.capteurs
+						.get(i);
 				JLabel lblDpassement;
-				if (capteur_pm.dépasse_max()) lblDpassement = new JLabel("d\u00E9passement max");
-				else if (capteur_pm.dépasse_min()) lblDpassement = new JLabel("d\u00E9passement min");
-				else lblDpassement = new JLabel("");
-				
+				if (capteur_pm.dépasse_max())
+					lblDpassement = new JLabel("d\u00E9passement max");
+				else if (capteur_pm.dépasse_min())
+					lblDpassement = new JLabel("d\u00E9passement min");
+				else
+					lblDpassement = new JLabel("");
+
 				GridBagConstraints gbc_lblDpassement = new GridBagConstraints();
 				gbc_lblDpassement.insets = new Insets(0, 0, 0, 5);
 				gbc_lblDpassement.gridx = 4;
@@ -149,12 +167,16 @@ public class fenêtre {
 
 			if (Capteur_base.capteurs.get(i) instanceof Capteur_pmt) {
 
-				Capteur_pmt capteur_pmt = (Capteur_pmt) Capteur_base.capteurs.get(i);
+				final Capteur_pmt capteur_pmt = (Capteur_pmt) Capteur_base.capteurs
+						.get(i);
 				float trend = capteur_pmt.get_trend();
 				JLabel lblTrend = new JLabel("" + trend);
-				if (trend>0) lblTrend.setIcon(null);
-				if (trend<0) lblTrend.setIcon(null);
-				if (trend==0) lblTrend.setIcon(null);
+				if (trend > 0)
+					lblTrend.setIcon(null);
+				if (trend < 0)
+					lblTrend.setIcon(null);
+				if (trend == 0)
+					lblTrend.setIcon(null);
 				GridBagConstraints gbc_lblTrend = new GridBagConstraints();
 				gbc_lblTrend.insets = new Insets(0, 0, 0, 5);
 				gbc_lblTrend.gridwidth = 2;
@@ -162,7 +184,16 @@ public class fenêtre {
 				gbc_lblTrend.gridy = i;
 				panel_1.add(lblTrend, gbc_lblTrend);
 
-				JButton btnClearTendance = new JButton("clear tendance");
+				JButton btnClearTendance = new JButton(new AbstractAction(
+						"Clear Trend") {
+					private static final long serialVersionUID = 389447219738703044L;
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						capteur_pmt.clear_trend();
+					}
+
+				});
 				GridBagConstraints gbc_btnClearTendance = new GridBagConstraints();
 				gbc_btnClearTendance.insets = new Insets(0, 0, 0, 5);
 				gbc_btnClearTendance.gridx = 8;
@@ -177,5 +208,4 @@ public class fenêtre {
 		label_5.setIcon(null);
 		panel_2.add(label_5);
 	}
-
 }

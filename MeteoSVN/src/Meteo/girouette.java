@@ -1,13 +1,11 @@
 package Meteo;
 
-import java.util.List;
 import java.util.Observable;
 
 public class girouette extends Capteur_base {
 
-	public girouette(List<unit> unités, String name, Observable observable)
-			throws Exception {
-		super(unités, name, observable);
+	public girouette(Observable observable) throws Exception {
+		super(Preparation.unités_direction, "Girouette", observable);
 	}
 
 }
