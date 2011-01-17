@@ -10,7 +10,6 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.GridBagLayout;
-import Meteo.Capteur_base;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.JComboBox;
@@ -56,7 +55,7 @@ public class fenêtre {
 		
 		JPanel panel = new JPanel();
 		splitPane.setRightComponent(panel);
-		panel.setLayout(new GridLayout(2, 1, 0, 0));
+		panel.setLayout(new GridLayout(Capteur_base.count_observers()+1, 1, 0, 0));
 		
 		JPanel panel_3 = new JPanel();
 		panel.add(panel_3);

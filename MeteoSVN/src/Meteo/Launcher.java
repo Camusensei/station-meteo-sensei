@@ -1,6 +1,11 @@
 package Meteo;
 
 import java.util.ArrayList;
+import Meteo.numeric_unit;
+import Meteo.symbolic_unit;
+import Meteo.numeric_unit_derived;
+import Meteo.sonde_random;
+import Meteo.Capteur_base;
 
 public class Launcher {
 	static numeric_unit radians;
@@ -95,6 +100,7 @@ public class Launcher {
 		new Thread((Runnable) Random0_360).start();
 		Capteur_base capteur=new girouette(unités_direction, "girouette", Random0_360);
 		System.out.println(capteur);
+		Meteo.fenêtre.main(null);
 	}
 
 }

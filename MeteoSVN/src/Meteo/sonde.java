@@ -10,6 +10,7 @@ public abstract class sonde extends Observable implements Runnable {
 	private long milisecondes;
 	public sonde (long time_ms){
 		super();
+		milisecondes=time_ms;
 	}
 	
 	public void change(float new_value){
