@@ -16,6 +16,11 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Toolkit; 
+import javax.swing.ImageIcon;
 
 import javax.swing.JComboBox;
 
@@ -23,6 +28,20 @@ public class fenêtre extends JFrame implements ActionListener {
 
 	private JFrame frame;
 
+	/**creates an image*/
+	/** Returns an ImageIcon, or null if the path was invalid. */
+	protected ImageIcon createImageIcon(String path,
+	                                           String description) {
+	    java.net.URL imgURL = getClass().getResource(path);
+	    if (imgURL != null) {
+	        return new ImageIcon(imgURL, description);
+	    } else {
+	        System.err.println("Couldn't find file: " + path);
+	        return null;
+	    }
+	}
+
+	
 	/**
 	 * Launch the application.
 	 */
@@ -50,6 +69,13 @@ public class fenêtre extends JFrame implements ActionListener {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		ImageIcon rosace = createImageIcon("images/Brosen.png","");
+		ImageIcon VVert = createImageIcon("images/vverts.png","");
+		ImageIcon VRouge = createImageIcon("images/vrouge.png.gif","");
+		ImageIcon flècheH = createImageIcon("images/flecheh.png","");
+		ImageIcon flècheM = createImageIcon("images/flechem.png","");
+		ImageIcon flècheB = createImageIcon("images/flecheb.png","");
+
 		frame = new JFrame();
 		frame.setBounds(100, 100, 757, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
