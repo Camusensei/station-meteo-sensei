@@ -13,6 +13,11 @@ public abstract class Capteur_m extends Capteur_base implements
 		this.mem_min = mem_min;
 		this.set = false;
 	}
+	
+	@Override
+	public String toString(){
+		return(super.toString()+" min="+this.mem_min+" max="+this.mem_max);
+	}
 
 	/**
 	 * @uml.property name="mem_max"

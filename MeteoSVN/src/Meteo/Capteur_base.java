@@ -25,6 +25,11 @@ public abstract class Capteur_base implements Observer {
 		capteurs.add(this);
 	}
 
+	@Override
+	public String toString(){
+		return("nom="+this.name+" unités="+this.unités+" valeur="+this.valeur);
+	}
+	
 	public static int count_observers(){
 		return capteurs.size();
 	};

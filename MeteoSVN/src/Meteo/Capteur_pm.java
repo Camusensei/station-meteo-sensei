@@ -12,6 +12,11 @@ public abstract class Capteur_pm extends Capteur_m implements I_capteur_plage {
 	public boolean dépasse_max() {
 		return dépassement_max;
 	}
+	
+	@Override
+	public String toString(){
+		return(super.toString()+" plageMin="+this.plage_min+" dépassement-="+this.dépassement_min+" plageMax="+this.plage_max+" dépassement+="+this.dépassement_max);
+	}
 
 	public Capteur_pm(List<unit> unités, String name, 
 			Observable observable, float mem_max, float mem_min,

@@ -7,6 +7,12 @@ public abstract class unit {
 		Description = description;
 		Symbol = symbol;
 	}
+	
+	@Override
+	public String toString(){
+		return(this.Symbol);
+	}
+	
 	private String Description;
 	private String Symbol;
 	public abstract String getFormattedValue(float valeur) throws Exception;

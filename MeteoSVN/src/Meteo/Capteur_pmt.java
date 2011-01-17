@@ -8,6 +8,11 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 	private Float[] last5;
 	private int where = 0;
 	private boolean init = true;
+	
+	@Override
+	public String toString(){
+		return(super.toString()+" tendance="+this.get_trend());
+	}
 
 	public Capteur_pmt(List<unit> unités, String name, Observable observable,
 			float mem_max, float mem_min, float plage_min, float plage_max,
