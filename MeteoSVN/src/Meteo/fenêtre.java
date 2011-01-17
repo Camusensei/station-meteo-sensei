@@ -210,11 +210,11 @@ public class fenêtre extends JFrame implements ActionListener {
 				float trend = capteur_pmt.get_trend();
 				JLabel lblTrend = new JLabel("" + trend);
 				if (trend > 0)
-					lblTrend.setIcon(null);
+					lblTrend.setIcon(flècheH);
 				if (trend < 0)
-					lblTrend.setIcon(null);
+					lblTrend.setIcon(flècheB);
 				if (trend == 0)
-					lblTrend.setIcon(null);
+					lblTrend.setIcon(flècheM);
 				GridBagConstraints gbc_lblTrend = new GridBagConstraints();
 				gbc_lblTrend.insets = new Insets(0, 0, 0, 5);
 				gbc_lblTrend.gridwidth = 2;
@@ -243,7 +243,7 @@ public class fenêtre extends JFrame implements ActionListener {
 		splitPane.setLeftComponent(panel_2);
 
 		JLabel label_5 = new JLabel("");
-		label_5.setIcon(null);
+		label_5.setIcon(rosace);
 		panel_2.add(label_5);
 	}
 
