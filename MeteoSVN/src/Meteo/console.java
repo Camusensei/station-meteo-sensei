@@ -1,13 +1,16 @@
 package Meteo;
 
 import java.io.IOException;
+import Meteo.Preparation;
 
-public class console implements Runnable {
+public class console{
 
-	private int val;
-	
-	@Override
-	public synchronized void run() {
+	public static void main(String[] args) throws Exception {
+		Preparation.create_units();
+		run();
+	}	
+	public static void run() {
+		int val;
 		while(true){
 			System.out.println(Capteur_base.count_observers());
 			System.out.println(Capteur_base.capteurs);
