@@ -56,7 +56,7 @@ public abstract class Capteur_base implements Observer {
 	@Override
 	public void update(Observable obs, Object arg1) {
 		if (obs!=observable) return;
-		valeur=((Float_object)arg1).getValue();
+		valeur=(Float)arg1;
 	}
 	public String current_value() throws Exception{
 		  return unit_chosen.getFormattedValue(valeur);

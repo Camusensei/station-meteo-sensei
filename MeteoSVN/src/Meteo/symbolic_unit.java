@@ -19,7 +19,7 @@ public class symbolic_unit extends unit {
 			int i,length;
 			if((length=tab_valeurs.length)!=tab_extrèmes.length) throw new Exception("les tableaux sont de taille différentes !");
 			for (i=0;i<length;i++) {
-				if (valeur<=tab_extrèmes[i]) return tab_valeurs[i];
+				if (valeur<tab_extrèmes[i]) return tab_valeurs[i];
 				}
 			return tab_valeurs[length];
 		}
