@@ -123,12 +123,12 @@ public class Preparation {
 		/* UNITÉS DE TEMPÉRATURE : FIN */
 		/* UNITÉS DE PRESSION : DÉBUT */
 		hPa = new numeric_unit("hPa", 0,
-				"Unité : hectopascals. Représente la pression (minimum :0)");
-		mbars = new numeric_unit_derived("mbars", 0, 0, 1F,
+				"Unité : hectopascals. Représente la pression (minimum : 0)");
+		mbars = new numeric_unit_derived("mbars", 0, 0F, 1F,
 				"Unité : millibars. Représente la pression (minimum : 0)");
-		mmHg = new numeric_unit_derived("mm Hg", 0, 0, 0.75F,
+		mmHg = new numeric_unit_derived("mm Hg", 1, 0F, 0.75F,
 				"Unité : millimètres de mercure. Représente la pression (minimum : 0)");
-		poHg = new numeric_unit_derived("po Hg", 0, 0, 0.033865F,
+		poHg = new numeric_unit_derived("po Hg", 2, 0F, 0.033865F,
 				"Unité : pouces de mercure. Représente la pression (minimum : 0)");
 		unités_pressions.add(hPa);
 		unités_pressions.add(mbars);
@@ -139,14 +139,14 @@ public class Preparation {
 		/* UNITÉS SUPLÉMENTAIRES : DÉBUT */
 		/* UNITÉS SUPLÉMENTAIRES : FIN */
 		/* CRÉATION DES CAPTEURS */
-		sonde_random Random0_360 = new sonde_random(1000L, 0, 360);
+		sonde_random Random0_360 = new sonde_random(50L, 0, 360);
 		new Thread((Runnable) Random0_360).start();
 		Capteur_base capteur1 = new girouette(Random0_360);
-		sonde_random Random_10_40 = new sonde_random(1000L, -10, 40);
+		sonde_random Random_10_40 = new sonde_random(50L, -10, 40);
 		new Thread((Runnable) Random_10_40).start();
 		Capteur_pmt capteur2 = new thermomètre(Random_10_40, -10F, 40F);
-		sonde_random Random0_1 = new sonde_random(1000L, 0, 1);
-		new Thread((Runnable) Random0_1).start();
-		Capteur_pm capteur3 = new hygromètre(Random0_1, 0, 1);
+		sonde_random Random0_100 = new sonde_random(50L, 0, 100);
+		new Thread((Runnable) Random0_100).start();
+		Capteur_pm capteur3 = new hygromètre(Random0_100, 0, 100);
 	};
 }

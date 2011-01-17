@@ -105,6 +105,14 @@ public class fenêtre extends JFrame implements ActionListener {
 			gbc_lblImageEtat.gridy = i;
 			panel_1.add(lblImageEtat, gbc_lblImageEtat);
 
+			final JLabel lblValeur = new JLabel("" + capteur.getValeur());
+			GridBagConstraints gbc_lblValeur = new GridBagConstraints();
+			gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
+			gbc_lblValeur.anchor = GridBagConstraints.EAST;
+			gbc_lblValeur.gridx = 2;
+			gbc_lblValeur.gridy = i;
+			panel_1.add(lblValeur, gbc_lblValeur);
+			
 			JButton btnNomCapteur = new JButton(
 					new AbstractAction(capteur.name) {
 
@@ -112,7 +120,7 @@ public class fenêtre extends JFrame implements ActionListener {
 
 						@Override
 						public void actionPerformed(ActionEvent e) {
-							capteur.getValeur();
+							lblValeur.setText("" + capteur.getValeur());
 						}
 
 					});
@@ -121,14 +129,6 @@ public class fenêtre extends JFrame implements ActionListener {
 			gbc_btnNomCapteur.gridx = 1;
 			gbc_btnNomCapteur.gridy = i;
 			panel_1.add(btnNomCapteur, gbc_btnNomCapteur);
-
-			JLabel lblValeur = new JLabel("" + capteur.valeur);
-			GridBagConstraints gbc_lblValeur = new GridBagConstraints();
-			gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
-			gbc_lblValeur.anchor = GridBagConstraints.EAST;
-			gbc_lblValeur.gridx = 2;
-			gbc_lblValeur.gridy = i;
-			panel_1.add(lblValeur, gbc_lblValeur);
 
 			Object[] elements = capteur.getUnités();
 			JComboBox comboBox = new JComboBox(elements);

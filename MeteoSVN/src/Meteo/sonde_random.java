@@ -18,7 +18,7 @@ public class sonde_random extends sonde {
 	 * @uml.property name="max"
 	 */
 	private float max;
-	Random r = new Random(0); // Seed for reproducible testing
+	Random r = new Random();
 
 	@Override
 	public void setData() {
