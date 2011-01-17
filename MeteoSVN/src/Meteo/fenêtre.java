@@ -88,19 +88,20 @@ public class fenêtre {
 		gbl_panel_1.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panel_1.setLayout(gbl_panel_1);
 		
+		for (int i=0;i<Capteur_base.count_observers();i++){
 		JLabel lblImageEtat = new JLabel("image etat");
 		lblImageEtat.setIcon(null);
 		GridBagConstraints gbc_lblImageEtat = new GridBagConstraints();
 		gbc_lblImageEtat.insets = new Insets(0, 0, 0, 5);
 		gbc_lblImageEtat.gridx = 0;
-		gbc_lblImageEtat.gridy = 0;
+		gbc_lblImageEtat.gridy = i;
 		panel_1.add(lblImageEtat, gbc_lblImageEtat);
 		
 		JButton btnNomCapteur = new JButton("nom capteur");
 		GridBagConstraints gbc_btnNomCapteur = new GridBagConstraints();
 		gbc_btnNomCapteur.insets = new Insets(0, 0, 0, 5);
 		gbc_btnNomCapteur.gridx = 1;
-		gbc_btnNomCapteur.gridy = 0;
+		gbc_btnNomCapteur.gridy = i;
 		panel_1.add(btnNomCapteur, gbc_btnNomCapteur);
 		
 		JLabel lblValeur = new JLabel("valeur");
@@ -108,7 +109,7 @@ public class fenêtre {
 		gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
 		gbc_lblValeur.anchor = GridBagConstraints.EAST;
 		gbc_lblValeur.gridx = 2;
-		gbc_lblValeur.gridy = 0;
+		gbc_lblValeur.gridy = i;
 		panel_1.add(lblValeur, gbc_lblValeur);
 		
 		JComboBox comboBox = new JComboBox();
@@ -116,21 +117,21 @@ public class fenêtre {
 		gbc_comboBox.insets = new Insets(0, 0, 0, 5);
 		gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
 		gbc_comboBox.gridx = 3;
-		gbc_comboBox.gridy = 0;
+		gbc_comboBox.gridy = i;
 		panel_1.add(comboBox, gbc_comboBox);
 		
 		JLabel lblDpassement = new JLabel("d\u00E9passement");
 		GridBagConstraints gbc_lblDpassement = new GridBagConstraints();
 		gbc_lblDpassement.insets = new Insets(0, 0, 0, 5);
 		gbc_lblDpassement.gridx = 4;
-		gbc_lblDpassement.gridy = 0;
+		gbc_lblDpassement.gridy = i;
 		panel_1.add(lblDpassement, gbc_lblDpassement);
 		
 		JButton btnResetMinmax = new JButton("reset minmax");
 		GridBagConstraints gbc_btnResetMinmax = new GridBagConstraints();
 		gbc_btnResetMinmax.insets = new Insets(0, 0, 0, 5);
 		gbc_btnResetMinmax.gridx = 5;
-		gbc_btnResetMinmax.gridy = 0;
+		gbc_btnResetMinmax.gridy = i;
 		panel_1.add(btnResetMinmax, gbc_btnResetMinmax);
 		
 		JLabel lblAheuzegaga = new JLabel("aheuzegaga");
@@ -139,16 +140,16 @@ public class fenêtre {
 		gbc_lblAheuzegaga.insets = new Insets(0, 0, 0, 5);
 		gbc_lblAheuzegaga.gridwidth = 2;
 		gbc_lblAheuzegaga.gridx = 6;
-		gbc_lblAheuzegaga.gridy = 0;
+		gbc_lblAheuzegaga.gridy = i;
 		panel_1.add(lblAheuzegaga, gbc_lblAheuzegaga);
 		
 		JButton btnClearTendance = new JButton("clear tendance");
 		GridBagConstraints gbc_btnClearTendance = new GridBagConstraints();
 		gbc_btnClearTendance.insets = new Insets(0, 0, 0, 5);
 		gbc_btnClearTendance.gridx = 8;
-		gbc_btnClearTendance.gridy = 0;
+		gbc_btnClearTendance.gridy = i;
 		panel_1.add(btnClearTendance, gbc_btnClearTendance);
-		
+		}
 		JPanel panel_2 = new JPanel();
 		splitPane.setLeftComponent(panel_2);
 		
