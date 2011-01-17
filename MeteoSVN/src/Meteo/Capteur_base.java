@@ -1,16 +1,16 @@
 package Meteo;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
-import Meteo.Float_object;
 
 /**
  * @uml.dependency   supplier="Meteo.unit"
  */
 public abstract class Capteur_base implements Observer {
 
-
+	public static Collection<Capteur_base> capteurs = null;
 	
 	public Capteur_base(List<unit> unités, String name, 
 			Observable observable) throws Exception {
@@ -22,8 +22,12 @@ public abstract class Capteur_base implements Observer {
 		this.name = name;
 		this.observable = observable;
 		this.observable.addObserver(this);
+		capteurs.add(this);
 	}
 
+	public static int count_observers(){
+		return capteurs.size();
+	};
 	public void del_observer (){
 		observable.deleteObserver(this);
 	}
