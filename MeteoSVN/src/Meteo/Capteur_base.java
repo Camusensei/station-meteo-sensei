@@ -51,6 +51,10 @@ public abstract class Capteur_base implements Observer {
 		return unit_chosen;
 	}
 
+	public float getValeur() {
+		return valeur;
+	}
+
 	public void setUnit_chosen(unit unit_chosen) {
 		this.unit_chosen = unit_chosen;
 	}
