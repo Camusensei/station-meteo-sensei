@@ -10,7 +10,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) throws Exception {
 		Preparation.create_units();
-		Meteo.fenêtre.main(null);
+		Meteo.fenêtre.draw(null);
 	}
 
 }

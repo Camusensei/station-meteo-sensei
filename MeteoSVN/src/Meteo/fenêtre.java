@@ -21,7 +21,7 @@ public class fenêtre {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void draw(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -100,14 +100,14 @@ public class fenêtre {
 			gbc_lblImageEtat.gridy = i;
 			panel_1.add(lblImageEtat, gbc_lblImageEtat);
 
-			JButton btnNomCapteur = new JButton("nom capteur");
+			JButton btnNomCapteur = new JButton(Capteur_base.capteurs.get(i).name);
 			GridBagConstraints gbc_btnNomCapteur = new GridBagConstraints();
 			gbc_btnNomCapteur.insets = new Insets(0, 0, 0, 5);
 			gbc_btnNomCapteur.gridx = 1;
 			gbc_btnNomCapteur.gridy = i;
 			panel_1.add(btnNomCapteur, gbc_btnNomCapteur);
 
-			JLabel lblValeur = new JLabel("valeur");
+			JLabel lblValeur = new JLabel(""+Capteur_base.capteurs.get(i).valeur);
 			GridBagConstraints gbc_lblValeur = new GridBagConstraints();
 			gbc_lblValeur.insets = new Insets(0, 0, 0, 5);
 			gbc_lblValeur.anchor = GridBagConstraints.EAST;
