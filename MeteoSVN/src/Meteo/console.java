@@ -9,6 +9,7 @@ public class console implements Runnable {
 	@Override
 	public synchronized void run() {
 		while(true){
+			System.out.println(Capteur_base.count_observers());
 			System.out.println(Capteur_base.capteurs);
 				try {
 					val=System.in.read();
