@@ -39,7 +39,8 @@ public abstract class Capteur_pmt extends Capteur_pm implements I_capteur_trend 
 				poids++;
 			}
 		}
-		return trend;
+		int intermédiaire = (int) trend * 100;
+		return ((float)intermédiaire / 100);
 	}
 
 	@Override

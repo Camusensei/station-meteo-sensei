@@ -65,6 +65,10 @@ public abstract class Capteur_base implements Observer {
 	 * @uml.associationEnd aggregation="shared" inverse="capteur_base:java.util.Observable"
 	 */
 	private Observable observable;
+	public Observable getObservable() {
+		return observable;
+	}
+
 	@Override
 	public void update(Observable obs, Object arg1) {
 		if (obs!=observable) return;

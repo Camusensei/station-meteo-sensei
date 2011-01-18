@@ -15,10 +15,6 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
 import javax.swing.JComboBox;
@@ -76,13 +72,13 @@ public class fenêtre extends JFrame implements ActionListener {
 	private void initialize() throws Exception {
 		ImageIcon rosace = createImageIcon("images/Brosen.png", "");
 		ImageIcon VVert = createImageIcon("images/vvert.png", "");
-		ImageIcon VRouge = createImageIcon("images/vrouge.png", "");
+		final ImageIcon VRouge = createImageIcon("images/vrouge.png", "");
 		ImageIcon flècheH = createImageIcon("images/flecheh.png", "");
 		ImageIcon flècheM = createImageIcon("images/flechem.png", "");
 		ImageIcon flècheB = createImageIcon("images/flecheb.png", "");
 
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1100, 400);
+		frame.setBounds(100, 100, 1300, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		JSplitPane splitPane = new JSplitPane();
@@ -128,7 +124,7 @@ public class fenêtre extends JFrame implements ActionListener {
 
 		for (int i = 0; i < Capteur_base.count_observers(); i++) {
 			final Capteur_base capteur = Capteur_base.capteurs.get(i);
-			JLabel lblImageEtat = new JLabel("");
+			final JLabel lblImageEtat = new JLabel("");
 			lblImageEtat.setIcon(VVert);
 			GridBagConstraints gbc_lblImageEtat = new GridBagConstraints();
 			gbc_lblImageEtat.insets = new Insets(0, 0, 0, 5);
@@ -144,6 +140,43 @@ public class fenêtre extends JFrame implements ActionListener {
 			gbc_lblValeur.gridy = i;
 			panel_1.add(lblValeur, gbc_lblValeur);
 
+			final JLabel lblTrend = new JLabel("");
+			if (Capteur_base.capteurs.get(i) instanceof Capteur_pmt) {
+
+				final Capteur_pmt capteur_pmt = (Capteur_pmt) Capteur_base.capteurs
+						.get(i);
+				float trend = capteur_pmt.get_trend();
+				lblTrend.setText("" + trend);
+				if (trend > 0)
+					lblTrend.setIcon(flècheH);
+				if (trend < 0)
+					lblTrend.setIcon(flècheB);
+				if (trend == 0)
+					lblTrend.setIcon(flècheM);
+				GridBagConstraints gbc_lblTrend = new GridBagConstraints();
+				gbc_lblTrend.insets = new Insets(0, 0, 0, 5);
+				gbc_lblTrend.gridwidth = 2;
+				gbc_lblTrend.gridx = 6;
+				gbc_lblTrend.gridy = i;
+				panel_1.add(lblTrend, gbc_lblTrend);
+
+				JButton btnClearTendance = new JButton(new AbstractAction(
+						"Clear Trend") {
+					private static final long serialVersionUID = 389447219738703044L;
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						capteur_pmt.clear_trend();
+					}
+
+				});
+				GridBagConstraints gbc_btnClearTendance = new GridBagConstraints();
+				gbc_btnClearTendance.insets = new Insets(0, 0, 0, 5);
+				gbc_btnClearTendance.gridx = 8;
+				gbc_btnClearTendance.gridy = i;
+				panel_1.add(btnClearTendance, gbc_btnClearTendance);
+			}
+
 			JButton btnNomCapteur = new JButton(
 					new AbstractAction(capteur.name) {
 
@@ -153,6 +186,13 @@ public class fenêtre extends JFrame implements ActionListener {
 						public void actionPerformed(ActionEvent e) {
 							try {
 								lblValeur.setText("" + capteur.getValeur());
+								lblImageEtat.setIcon(VRouge);
+								if (capteur instanceof Capteur_pmt) {
+									lblTrend.setText(""
+											+ ((Capteur_pmt) capteur)
+													.get_trend());
+								}
+
 							} catch (Exception e1) {
 								// TODO Auto-generated catch block
 								e1.printStackTrace();
@@ -199,57 +239,6 @@ public class fenêtre extends JFrame implements ActionListener {
 				gbc_btnResetMinmax.gridx = 5;
 				gbc_btnResetMinmax.gridy = i;
 				panel_1.add(btnResetMinmax, gbc_btnResetMinmax);
-			}
-
-			if (Capteur_base.capteurs.get(i) instanceof Capteur_pmt) {
-
-				final Capteur_pmt capteur_pmt = (Capteur_pmt) Capteur_base.capteurs
-						.get(i);
-				float trend = capteur_pmt.get_trend();
-				JLabel lblTrend = new JLabel("" + trend);
-				if (trend > 0)
-					lblTrend.setIcon(flècheH);
-				if (trend < 0)
-					lblTrend.setIcon(flècheB);
-				if (trend == 0)
-					lblTrend.setIcon(flècheM);
-				GridBagConstraints gbc_lblTrend = new GridBagConstraints();
-				gbc_lblTrend.insets = new Insets(0, 0, 0, 5);
-				gbc_lblTrend.gridwidth = 2;
-				gbc_lblTrend.gridx = 6;
-				gbc_lblTrend.gridy = i;
-				panel_1.add(lblTrend, gbc_lblTrend);
-
-				JButton btnClearTendance = new JButton(new AbstractAction(
-						"Clear Trend") {
-					private static final long serialVersionUID = 389447219738703044L;
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						capteur_pmt.clear_trend();
-					}
-
-				});
-				GridBagConstraints gbc_btnClearTendance = new GridBagConstraints();
-				gbc_btnClearTendance.insets = new Insets(0, 0, 0, 5);
-				gbc_btnClearTendance.gridx = 8;
-				gbc_btnClearTendance.gridy = i;
-				panel_1.add(btnClearTendance, gbc_btnClearTendance);
-
-				if (Capteur_base.capteurs.get(i) instanceof Capteur_pm) {
-
-					JLabel lblmin = new JLabel("min");
-					GridBagConstraints gbc_lblmin = new GridBagConstraints();
-					gbc_lblHautDroiteHeure.gridx = 9;
-					gbc_lblHautDroiteHeure.gridy = i;
-					panel_1.add(lblmin, gbc_lblmin);
-
-					JLabel lblmax = new JLabel("max");
-					GridBagConstraints gbc_lblmax = new GridBagConstraints();
-					gbc_lblHautDroiteHeure.gridx = 10;
-					gbc_lblHautDroiteHeure.gridy = i;
-					panel_1.add(lblmax, gbc_lblmax);
-				}
 			}
 		}
 		JPanel panel_2 = new JPanel();
