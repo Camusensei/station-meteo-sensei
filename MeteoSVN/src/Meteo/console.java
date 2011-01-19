@@ -3,13 +3,25 @@ package Meteo;
 import java.io.IOException;
 import Meteo.Preparation;
 
+/**
+ * @author Minatosensei
+ *
+ */
 public class console {
 
+	/**
+	 * Main: démarre la console
+	 * @param args non utilisés
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		Preparation.create_units();
 		run();
 	}
 
+	/**
+	 * Effectue l'affichage de la console
+	 */
 	public static void run() {
 		int val;
 		while (true) {

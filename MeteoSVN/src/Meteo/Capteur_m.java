@@ -100,7 +100,7 @@ public abstract class Capteur_m extends Capteur_base implements
 	}
 
 	/**
-	 * Reset de la mémoire .
+	 * Reset de la mémoire du capteur.
 	 */
 	public void reset() {
 		mem_min = valeur;

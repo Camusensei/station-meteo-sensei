@@ -5,7 +5,8 @@ import Meteo.Preparation;
 public class Launcher {
 
 	/**
-	 * @param args
+	 * Lance le programme complet, avec l'interface graphique
+	 * @param args non utilisés
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {

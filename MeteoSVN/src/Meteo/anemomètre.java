@@ -2,9 +2,6 @@ package Meteo;
 
 import java.util.Observable;
 
-/**
- * La classe anemomètre.
- */
 public class anemomètre extends Capteur_pm {
 
 	/**

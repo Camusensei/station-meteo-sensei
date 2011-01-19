@@ -1,6 +1,12 @@
 package Meteo;
 
 public class symbolic_unit extends unit {
+	/**
+	 * @param tab_extrèmes Le tableau contenant les extrèmes des plages d'unités symboliques
+	 * @param tableau_valeurs Le tableau contenant les valeurs des plages d'unités symboliques
+	 * @param description Description de l'unité
+	 * @param symbol le symbole de l'unité
+	 */
 	public symbolic_unit(float[] tab_extrèmes, String[] tableau_valeurs,
 			String description, String symbol) {
 		super(description, symbol);
@@ -15,6 +21,9 @@ public class symbolic_unit extends unit {
 	 */
 	public String[] tab_valeurs;
 
+	/**
+	 * @see Meteo.unit#getFormattedValue(float)
+	 */
 	@Override
 	public String getFormattedValue(float valeur) throws Exception {
 		int i, length;

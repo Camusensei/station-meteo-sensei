@@ -7,6 +7,10 @@ import java.io.IOException;
 
 public class sonde_fichier_serveur extends sonde {
 
+	/**
+	 * @param time_ms le temps en milisecondes d'attente entre deux nouvelles valeurs
+	 * @param fichier le fichier à lire en entrée
+	 */
 	public sonde_fichier_serveur(long time_ms, String fichier) {
 		super(time_ms);
 		this.fichier = fichier;
@@ -17,6 +21,9 @@ public class sonde_fichier_serveur extends sonde {
 	 */
 	private String fichier;
 
+	/**
+	 * @see Meteo.sonde#setData()
+	 */
 	@Override
 	public void setData() {
 		try {

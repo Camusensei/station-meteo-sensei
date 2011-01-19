@@ -3,6 +3,9 @@ package Meteo;
 import java.util.ArrayList;
 
 public class Preparation {
+	/**
+	 * La déclaration des unités et groupes d'unités crées par la suite
+	 */
 	static ArrayList<ArrayList<unit>> unités = new ArrayList<ArrayList<unit>>(
 			10);
 	static numeric_unit radians;
@@ -29,6 +32,11 @@ public class Preparation {
 	static numeric_unit_derived poHg;
 	static ArrayList<unit> unités_pressions = new ArrayList<unit>(3);
 
+	/**
+	 * La création concrète des unités ainsi que les groupes d'unités
+	 * Création des sondes, création des capteurs, attachement des deux.
+	 * @throws Exception
+	 */
 	public static void create_units() throws Exception {
 		/* UNITÉS DE DIRECTIONS : DÉBUT */
 		degrés = new numeric_unit_derived("° (Degrés)", 0, 0, 57.29578F,
