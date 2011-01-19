@@ -19,7 +19,13 @@ public abstract class unit {
 		return (this.Symbol);
 	}
 
+	/**
+	 * la description de l'unitée
+	 */
 	private String Description;
+	/**
+	 * le symbole de l'unité
+	 */
 	private String Symbol;
 
 	/**

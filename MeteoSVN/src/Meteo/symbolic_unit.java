@@ -13,10 +13,12 @@ public class symbolic_unit extends unit {
 	}
 
 	/**
+	 * Le tableau contenant les extrèmes des plages d'unités symboliques
 	 * @uml.property name="tab_extrèmes" multiplicity="(0 -1)" dimension="1"
 	 */
 	public float[] tab_extrèmes;
 	/**
+	 * Le tableau contenant les valeurs des plages d'unités symboliques
 	 * @uml.property name="tab_valeurs" multiplicity="(0 -1)" dimension="1"
 	 */
 	public String[] tab_valeurs;
@@ -36,3 +38,4 @@ public class symbolic_unit extends unit {
 		return tab_valeurs[length];
 	}
 }
+

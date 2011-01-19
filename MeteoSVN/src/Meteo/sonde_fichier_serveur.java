@@ -17,6 +17,7 @@ public class sonde_fichier_serveur extends sonde {
 	}
 
 	/**
+	 * le fichier à lire en entrée
 	 * @uml.property name="fichier"
 	 */
 	private String fichier;

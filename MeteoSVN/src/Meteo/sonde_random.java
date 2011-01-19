@@ -16,10 +16,12 @@ public class sonde_random extends sonde {
 	}
 
 	/**
+	 * le minimum à ne pas dépasser pour la généaration aléatoire
 	 * @uml.property name="min"
 	 */
 	private float min;
 	/**
+	 * le maximum à ne pas dépasser pour la généaration aléatoire
 	 * @uml.property name="max"
 	 */
 	private float max;

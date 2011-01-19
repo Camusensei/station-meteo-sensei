@@ -16,7 +16,13 @@ public class numeric_unit_derived extends numeric_unit {
 		this.multiplicateur = multiplicateur;
 	}
 
+	/**
+	 * multiplicateur la quantité à multuplier par la valeur de base
+	 */
 	private float multiplicateur;
+	/**
+	 * la quantité à ajouter à la valeur de base
+	 */
 	private float décalage;
 
 	/**

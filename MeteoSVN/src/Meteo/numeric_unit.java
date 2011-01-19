@@ -12,6 +12,7 @@ public class numeric_unit extends unit {
 	}
 
 	/**
+	 * la description de l'unité
 	 * @uml.property name="Précision"
 	 */
 	public int précision;
